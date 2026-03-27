@@ -71,7 +71,7 @@ window.handleBookingSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Submitting...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  emailjs.send('service_e7w0wo7', 'template_7eknwxa', {
+  emailjs.send('service_4a1mjyl', 'template_p1ji7te', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
@@ -94,10 +94,11 @@ window.handleBookingSubmit = function(e) {
       showToast('Booking request sent successfully! We will email you to confirm.');
     })
     .catch((error) => {
-      console.error('Email failed to send:', error);
+      console.error('EmailJS Booking Error:', error);
+      console.error('Full Error Object:', JSON.stringify(error, null, 2));
       submitBtn.disabled = false;
       submitBtn.textContent = orgText;
-      showToast('Submission failed. Please try again or contact me directly.', 'error');
+      showToast('Submission failed. Please check the console or contact me directly.', 'error');
     });
 }
 
@@ -125,7 +126,7 @@ window.handleContactSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  emailjs.send('service_e7w0wo7', 'template_7eknwxa', {
+  emailjs.send('service_4a1mjyl', 'template_p1ji7te', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
@@ -142,7 +143,8 @@ window.handleContactSubmit = function(e) {
       showToast('Message sent! I will get back to you within 24 hours.');
     })
     .catch((error) => {
-      console.error('Email failed to send:', error);
+      console.error('EmailJS Contact Error:', error);
+      console.error('Full Error Object:', JSON.stringify(error, null, 2));
       submitBtn.disabled = false;
       submitBtn.innerHTML = orgHTML;
       showToast('Message failed to send. Please try again later.', 'error');
