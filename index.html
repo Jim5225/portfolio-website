@@ -44,6 +44,14 @@
     ]
   }
   </script>
+  <!-- EmailJS Browser SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      // Initialize with Public Key - USER ACTION REQUIRED: Replace 'YOUR_PUBLIC_KEY' with your actual public key
+      emailjs.init('YOUR_PUBLIC_KEY');
+    })();
+  </script>
 </head>
 <body>
   <!-- Scroll Progress Bar -->
