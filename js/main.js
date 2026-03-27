@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     particlesJS('particles-js', {
       particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: ['#2563eb', '#06b6d4', '#8b5cf6'] },
+        color: { value: ['#3b82f6', '#22d3ee', '#8b5cf6'] },
         shape: { type: 'circle' },
         opacity: { value: 0.3, random: true },
         size: { value: 3, random: true },

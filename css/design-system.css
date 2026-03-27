@@ -8,23 +8,23 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* — Colors — */
-  --clr-bg-primary:     #060a13;
-  --clr-bg-secondary:   #0a0e1a;
-  --clr-bg-tertiary:    #0f1629;
-  --clr-bg-card:        rgba(15, 22, 41, 0.65);
-  --clr-bg-glass:       rgba(15, 22, 41, 0.45);
+  --clr-bg-primary:     #020617; /* Deepest blue/black */
+  --clr-bg-secondary:   #0f172a; /* Slightly lighter surface */
+  --clr-bg-surface:     rgba(30, 41, 59, 0.4); /* Glassmorphism surface */
+  --clr-bg-card:        rgba(15, 23, 42, 0.7); /* Card background */
+  --clr-bg-glass:       rgba(30, 41, 59, 0.3); /* Transparent layers */
 
-  --clr-primary:        #2563eb;
-  --clr-primary-light:  #3b82f6;
+  --clr-primary:        #3b82f6; /* Modern Blue */
+  --clr-primary-light:  #60a5fa;
   --clr-primary-dark:   #1d4ed8;
-  --clr-secondary:      #06b6d4;
-  --clr-secondary-light:#22d3ee;
-  --clr-accent:         #8b5cf6;
-  --clr-accent-light:   #a78bfa;
+  --clr-secondary:      #22d3ee; /* Modern Cyan */
+  --clr-secondary-light:#67e8f9;
+  --clr-accent:         #8b5cf6; /* Modern Purple */
+  --clr-accent-light:   #c084fc;
 
-  --clr-text-primary:   #f1f5f9;
-  --clr-text-secondary: #94a3b8;
-  --clr-text-muted:     #64748b;
+  --clr-text-primary:   #f8fafc; /* Clear white */
+  --clr-text-secondary: #e2e8f0; /* Higher contrast gray (was #94a3b8) */
+  --clr-text-muted:     #94a3b8; /* For secondary/meta info (was #64748b) */
   --clr-text-accent:    #38bdf8;
 
   --clr-border:         rgba(148, 163, 184, 0.1);
@@ -36,14 +36,15 @@
   --clr-error:          #ef4444;
 
   /* — Gradients — */
-  --grad-primary:       linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-  --grad-primary-hover: linear-gradient(135deg, #1d4ed8 0%, #0891b2 100%);
-  --grad-hero:          radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-                        radial-gradient(ellipse at 50% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
-  --grad-card:          linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
-  --grad-text:          linear-gradient(135deg, #2563eb, #06b6d4, #8b5cf6);
-  --grad-glow:          radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+  --grad-primary:       linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
+  --grad-primary-hover: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  --grad-hero:          radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 50% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+  --grad-mesh:          linear-gradient(45deg, #020617 0%, #0f172a 50%, #020617 100%);
+  --grad-card:          linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
+  --grad-text:          linear-gradient(135deg, #3b82f6, #22d3ee, #8b5cf6);
+  --grad-glow:          radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
 
   /* — Typography — */
   --ff-heading:  'Outfit', sans-serif;
@@ -146,6 +147,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
 body {
@@ -174,6 +176,8 @@ h4 { font-size: var(--fs-lg); }
 p {
   color: var(--clr-text-secondary);
   line-height: var(--lh-relaxed);
+  letter-spacing: 0.015em;
+  font-weight: 300; /* Lighter weight for cleaner look on dark bg */
 }
 
 a {
@@ -283,9 +287,10 @@ input, textarea, select {
 .section-label::after  { margin-left: var(--sp-3); }
 
 .section-title {
-  font-size: var(--fs-3xl);
+  font-size: var(--fs-4xl);
   font-weight: var(--fw-extrabold);
   margin-bottom: var(--sp-4);
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {

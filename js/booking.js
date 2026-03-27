@@ -71,7 +71,7 @@ window.handleBookingSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Submitting...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  emailjs.send('service_4a1mjyl', 'template_p1ji7te', {
+  emailjs.send('service_okqgufh', 'template_y9up7io', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
@@ -126,7 +126,7 @@ window.handleContactSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  emailjs.send('service_4a1mjyl', 'template_p1ji7te', {
+  emailjs.send('service_okqgufh', 'template_y9up7io', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
