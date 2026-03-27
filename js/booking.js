@@ -71,8 +71,7 @@ window.handleBookingSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Submitting...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  // USER ACTION REQUIRED: Replace 'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID' and template params as needed
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+  emailjs.send('service_e7w0wo7', 'template_7eknwxa', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
@@ -126,7 +125,7 @@ window.handleContactSubmit = function(e) {
   submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Sending...";
   
   // REAL EMAIL INTEGRATION (EmailJS)
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_CONTACT_TEMPLATE_ID', {
+  emailjs.send('service_e7w0wo7', 'template_7eknwxa', {
     to_name: "Jayed Al Afroz Jim",
     from_name: data.name,
     from_email: data.email,
