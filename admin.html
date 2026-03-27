@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Jayed Al Afroz Jim</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./css/design-system.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <a href="./index.html" class="admin-logo">
+        <span class="logo-dot"></span> Jim Admin
+      </a>
+      
+      <nav class="admin-nav">
+        <button class="admin-nav-item active" data-target="dashboard">
+          <i class='bx bx-grid-alt'></i> Dashboard
+        </button>
+        <button class="admin-nav-item" data-target="bookings">
+          <i class='bx bx-calendar'></i> Bookings <span id="nav-booking-badge" class="badge badge--cyan" style="margin-left:auto; padding:0 6px;">0</span>
+        </button>
+        <button class="admin-nav-item" data-target="messages">
+          <i class='bx bx-envelope'></i> Messages <span id="nav-message-badge" class="badge" style="margin-left:auto; padding:0 6px;">0</span>
+        </button>
+      </nav>
+      
+      <div class="admin-footer">
+        <div class="admin-user">
+          <img src="./assets/images/profile.png" alt="Admin" class="admin-user-avatar">
+          <div class="admin-user-info">
+            <span class="admin-user-name">Jayed Al Afroz</span>
+            <span class="admin-user-role">Administrator</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <div class="admin-header">
+        <h1 class="admin-title" id="pageTitle">Overview</h1>
+        
+        <!-- Mobile Toggle -->
+        <div class="nav-toggle" id="adminToggle" style="display: none; z-index: 1001;">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      
+      <!-- Dashboard Panel -->
+      <div class="admin-panel active" id="panel-dashboard">
+        <div class="admin-stats">
+          <div class="stat-card">
+            <div class="stat-icon"><i class='bx bx-calendar-star'></i></div>
+            <div class="stat-info">
+              <span class="stat-value" id="stat-bookings">0</span>
+              <span class="stat-label">Total Bookings</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(6, 182, 212, 0.1); color: var(--clr-secondary);"><i class='bx bx-message-square-detail'></i></div>
+            <div class="stat-info">
+              <span class="stat-value" id="stat-messages">0</span>
+              <span class="stat-label">Total Messages</span>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--clr-success);"><i class='bx bx-check-circle'></i></div>
+            <div class="stat-info">
+              <span class="stat-value" id="stat-new">0</span>
+              <span class="stat-label">New Leads Today</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="data-card">
+          <div class="data-header">
+            <h3 class="data-title">Recent Activity</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table" id="activityTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="activityBody">
+                <!-- Populated dynamically -->
+                <tr><td colspan="4" style="text-align:center;">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bookings Panel -->
+      <div class="admin-panel" id="panel-bookings">
+        <div class="data-card">
+          <div class="data-header">
+            <h3 class="data-title">Consultation Requests</h3>
+            <button class="btn btn-sm btn-secondary" onclick="clearData('portfolio_bookings')">Clear Data</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date Requested</th>
+                  <th>Client Name</th>
+                  <th>Email</th>
+                  <th>Package</th>
+                  <th>Pref. Time</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsBody">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Messages Panel -->
+      <div class="admin-panel" id="panel-messages">
+        <div class="data-card">
+          <div class="data-header">
+            <h3 class="data-title">Contact Form Submissions</h3>
+            <button class="btn btn-sm btn-secondary" onclick="clearData('portfolio_messages')">Clear Data</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Message Preview</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="messagesBody">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+  
+  <!-- View Modal -->
+  <div class="modal-overlay" id="viewModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="viewModalTitle">Details</h3>
+        <button class="modal-close" onclick="closeViewModal()">
+          <i class='bx bx-x' style="font-size: 24px;"></i>
+        </button>
+      </div>
+      <div id="viewModalContent" style="color: var(--clr-text-secondary); line-height: 1.6;"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i class='bx bx-check-circle'></i>
+    <span id="toastMsg">Action successful</span>
+  </div>
+
+  <script type="module" src="./js/utils.js"></script>
+  <script type="module" src="./js/admin.js"></script>
+</body>
+</html>

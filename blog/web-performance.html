@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Web Vitals & Web Performance | Jayed Al Afroz Jim</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-dot"></span> Jim
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="../blog.html" class="nav-link active">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: calc(var(--nav-height) + var(--sp-12)); padding-bottom: var(--sp-24);">
+    <div class="container container--sm">
+      <article>
+        <header class="post-header">
+          <div class="post-meta-lg">
+            <span>Web Dev</span>
+            <span>•</span>
+            <time>January 10, 2026</time>
+          </div>
+          <h1 class="post-title">Why Core Web Vitals Are the Most Important Metric for SaaS Landing Pages</h1>
+          
+          <div class="post-author">
+            <img src="../assets/images/profile.png" alt="Jayed Al Afroz Jim" class="author-img">
+            <div class="author-info">
+              <span class="author-name">Jayed Al Afroz Jim</span>
+              <span class="author-role">Web Developer</span>
+            </div>
+          </div>
+        </header>
+
+        <img src="../assets/images/project-landing-page.png" alt="Core Web Vitals" class="post-featured-image">
+
+        <div class="post-content">
+          <p>You've spent thousands of dollars on a beautiful new SaaS landing page. The design is stunning, the copy is persuasive, and your Meta Ads are driving incredibly cheap clicks.</p>
+          <p>But when you check your analytics, your bounce rate is 85% and your conversion rate is abysmal.</p>
+          <p>The culprit? Your page takes 4.5 seconds to load.</p>
+
+          <blockquote>
+            According to Google, as page load time goes from 1s to 3s, the probability of a mobile user bouncing increases by 32%. From 1s to 5s, the probability increases by 90%.
+          </blockquote>
+
+          <h2>The Big Three: Core Web Vitals</h2>
+          <p>Google has made it very clear that Page Experience is a ranking factor. The three pillars of this experience are Core Web Vitals:</p>
+
+          <h3>1. Largest Contentful Paint (LCP)</h3>
+          <p>LCP measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.</p>
+          <p><strong>Common Fixes:</strong></p>
+          <ul>
+            <li>Optimize your hero images. Never serve an uncompressed 5MB PNG. Compress images to WebP or AVIF formats.</li>
+            <li>Preload the critical LCP asset (e.g., <code>&lt;link rel="preload" href="hero.webp" as="image"&gt;</code>).</li>
+            <li>Use a Content Delivery Network (CDN) to reduce server response time (TTFB).</li>
+          </ul>
+
+          <h3>2. First Input Delay (FID) -> Interaction to Next Paint (INP)</h3>
+          <p>INP measures interactivity and responsiveness. It assesses a page's overall responsiveness to user interactions by observing the latency of all click, tap, and keyboard interactions.</p>
+          <p><strong>Common Fixes:</strong></p>
+          <ul>
+            <li>Break up Long Tasks in JavaScript. If JavaScript blocks the main thread, the browser can't respond to user clicks.</li>
+            <li>Minimize unnecessary third-party scripts (looking at you, tracking pixels).</li>
+            <li>Use <code>defer</code> or <code>async</code> on non-critical script tags.</li>
+          </ul>
+
+          <h3>3. Cumulative Layout Shift (CLS)</h3>
+          <p>CLS measures visual stability. Have you ever gone to click a button, but the page suddenly shifts, causing you to click an ad instead? That's poor CLS, and it infuriates users.</p>
+          <p><strong>Common Fixes:</strong></p>
+          <ul>
+            <li>Always include width and height size attributes on your images and video elements.</li>
+            <li>Never inject dynamic content above existing content unless responding to user interaction.</li>
+            <li>Reserve space for ad slots and embeds before they load.</li>
+          </ul>
+
+          <h2>Performance Drives Revenue</h2>
+          <p>A fast website isn't just about SEO rankings; it's about User Experience and Conversion Rate Optimization (CRO).</p>
+          <p>Pinterest reduced perceived wait times by 40% and increased search engine traffic and sign-ups by 15%. Tinder cut load times from 11.91 seconds to 4.69 seconds and saw a massive increase in swipe activity.</p>
+          <p>Don't let poor performance kill your marketing efforts. Optimize your landing pages, hit those Core Web Vitals, and watch your conversion rates soar.</p>
+        </div>
+      </article>
+
+      <div style="margin-top: var(--sp-16); padding: var(--sp-8); background: var(--grad-card); border: 1px solid var(--clr-border); border-radius: var(--radius-xl); text-align: center;">
+        <h3 style="margin-bottom: var(--sp-4);">Is Your Website Too Slow?</h3>
+        <p style="color: var(--clr-text-secondary); margin-bottom: var(--sp-6);">Let me perform a comprehensive performance audit and implement technical fixes to drastically reduce your page load times.</p>
+        <a href="../index.html#contact" class="btn btn-secondary">Request Performance Audit</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: var(--clr-text-secondary);">&copy; <script>document.write(new Date().getFullYear())</script> Jayed Al Afroz Jim. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

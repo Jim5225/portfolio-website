@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Digital Marketing Specialist & SEO Expert | Jayed Al Afroz Jim</title>
+  <meta name="description" content="Data-driven marketing and high-performance web solutions to help businesses grow. Specialized in SEO, Meta Ads, and Growth Strategy. Based in Dhaka, Bangladesh.">
+  <meta name="keywords" content="digital marketing specialist, SEO expert, growth marketer, Google ads expert, Meta ads specialist, technical SEO, freelancer Bangladesh">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Jayed Al Afroz Jim | Digital Marketing & Web Development">
+  <meta property="og:description" content="Data-driven marketing and high-performance web solutions to help businesses grow faster.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/profile.png">
+  
+  <!-- Boxicons for standard icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/design-system.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jayed Al Afroz Jim",
+    "url": "https://github.com/Jim5225",
+    "jobTitle": "Digital Marketing Specialist & Performance Marketer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "Bangladesh"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/",
+      "https://www.facebook.com/jayedalafroz.jim.5",
+      "https://github.com/Jim5225",
+      "https://www.instagram.com/jayedjim5/"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-dot"></span> Jim
+      </a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="./blog.html" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="nav-cta">
+          <button class="btn btn-primary btn-sm" onclick="openBookingModal()">Book a Call</button>
+        </div>
+      </div>
+      
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero section">
+      <div class="hero-bg"></div>
+      <div id="particles-js"></div>
+      
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="hero-subtitle">Hello, I'm Jayed Al Afroz Jim</div>
+          <h1 class="hero-title">
+            <span class="static-text">I am a </span>
+            <span class="typewriter-text" id="typewriter"></span>
+          </h1>
+          <p class="hero-desc">
+            "I help businesses grow faster with data-driven marketing and high-performance web solutions."
+          </p>
+          
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" onclick="openBookingModal()">
+              <i class='bx bx-calendar'></i> Book Free Consultation
+            </button>
+            <a href="#resume" class="btn btn-secondary btn-lg" onclick="downloadCV(event)">
+              <i class='bx bx-download'></i> Download CV
+            </a>
+          </div>
+          
+          <div class="social-links" style="justify-content: center;">
+            <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/Jim5225" target="_blank" class="social-link" aria-label="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.facebook.com/jayedalafroz.jim.5" target="_blank" class="social-link" aria-label="Facebook">
+              <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="social-link" aria-label="Instagram">
+              <i class='bx bxl-instagram'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#about" class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        Scroll Down
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Who I <span class="gradient-text">Am</span></h2>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-image-container reveal reveal-delay-1">
+            <div class="about-image">
+              <img src="./assets/images/profile.png" alt="Jayed Al Afroz Jim">
+              
+              <div class="about-stats">
+                <div class="stat-item">
+                  <span class="stat-num" data-target="5">0</span>
+                  <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-num" data-target="50">0</span>
+                  <span class="stat-label">Projects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-content reveal reveal-delay-2">
+            <h3>Bridging the gap between <span class="gradient-text">Marketing & Tech</span></h3>
+            <p>
+              Hey there! I'm an intermediate Digital Marketing Specialist and Web Developer based in Dhaka, Bangladesh. I specialize in combining data-driven marketing strategies (SEO, Meta Ads, Google Ads) with modern web development (React, TypeScript) to create systems that don't just look good, but actually convert.
+            </p>
+            <p>
+              My goal is to help businesses grow faster by providing end-to-end solutions — from acquiring leads through targeted campaigns to converting them on high-performance landing pages.
+            </p>
+            
+            <div class="about-features">
+              <div class="feature-card">
+                <i class='bx bx-brain feature-icon'></i>
+                <div>
+                  <span class="feature-title">Fast Learner</span>
+                  <span style="font-size: var(--fs-xs); color: var(--clr-text-muted);">Adapting to new tech & algorithms instantly</span>
+                </div>
+              </div>
+              <div class="feature-card">
+                <i class='bx bx-data feature-icon'></i>
+                <div>
+                  <span class="feature-title">Data-Driven</span>
+                  <span style="font-size: var(--fs-xs); color: var(--clr-text-muted);">Decisions backed by analytics, not feelings</span>
+                </div>
+              </div>
+              <div class="feature-card">
+                <i class='bx bx-bulb feature-icon'></i>
+                <div>
+                  <span class="feature-title">Creative Solver</span>
+                  <span style="font-size: var(--fs-xs); color: var(--clr-text-muted);">Finding unique solutions to complex problems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My Expertise</span>
+          <h2 class="section-title">Services I <span class="gradient-text">Offer</span></h2>
+          <p class="section-subtitle">Comprehensive digital solutions to scale your brand and online presence.</p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Digital Marketing - Primary -->
+          <div class="service-card glass-card reveal highlight-card">
+            <div class="service-icon"><i class='bx bx-line-chart'></i></div>
+            <h3 class="service-title">SEO Optimization</h3>
+            <p class="service-desc">Complete on-page and off-page SEO strategies to rank your website higher on search engines and drive organic traffic.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal reveal-delay-1">
+            <div class="service-icon"><i class='bx bxl-facebook-circle'></i></div>
+            <h3 class="service-title">Facebook Ads Campaign</h3>
+            <p class="service-desc">Highly targeted ad campaigns that maximize ROI, focusing on lead generation and direct sales through advanced retargeting.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal reveal-delay-2">
+            <div class="service-icon"><i class='bx bxl-google'></i></div>
+            <h3 class="service-title">Google Ads Management</h3>
+            <p class="service-desc">Search, Display, and Performance Max campaigns optimized for lowest cost-per-acquisition (CPA) and highest conversion volume.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal reveal-delay-3">
+            <div class="service-icon"><i class='bx bx-code-block'></i></div>
+            <h3 class="service-title">Technical SEO</h3>
+            <p class="service-desc">Fixing core web vitals, crawlability issues, site architecture, and schema markup to ensure search engines love your site.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal">
+            <div class="service-icon"><i class='bx bx-target-lock'></i></div>
+            <h3 class="service-title">Conversion Rate Optimization</h3>
+            <p class="service-desc">Analyzing user behavior to implement A/B testing and design tweaks that turn more of your visitors into paying customers.</p>
+          </div>
+
+          <div class="service-card glass-card reveal reveal-delay-1">
+            <div class="service-icon"><i class='bx bx-share-alt'></i></div>
+            <h3 class="service-title">Social Media Management</h3>
+            <p class="service-desc">Building engaged communities around your brand through consistent, high-quality content strategies and active engagement.</p>
+          </div>
+          
+          <!-- Web Development - Secondary -->
+          <div class="service-card glass-card reveal reveal-delay-2">
+            <div class="service-icon"><i class='bx bx-window-alt'></i></div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-desc">Custom, responsive web applications built with modern tools like React, TypeScript, and Vite for blazing fast performance.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal reveal-delay-3">
+            <div class="service-icon"><i class='bx bx-layout'></i></div>
+            <h3 class="service-title">Landing Page Design</h3>
+            <p class="service-desc">High-converting landing pages tailored to your ad campaigns, utilizing persuasive copy and seamless UI/UX design.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal">
+            <div class="service-icon"><i class='bx bx-pencil'></i></div>
+            <h3 class="service-title">Content Marketing</h3>
+            <p class="service-desc">Creating compelling, SEO-optimized content that educates your audience and drives long-term organic growth.</p>
+          </div>
+          
+          <div class="service-card glass-card reveal reveal-delay-1">
+            <div class="service-icon"><i class='bx bx-tachometer'></i></div>
+            <h3 class="service-title">Performance Optimization</h3>
+            <p class="service-desc">Speeding up your existing website by optimizing assets, implementing lazy loading, and refining server configurations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section" style="background: var(--clr-bg-card);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My Works</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+        
+        <div class="tabs reveal">
+          <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="web">Web Development</button>
+          <button class="tab-btn" data-filter="marketing">Marketing & SEO</button>
+        </div>
+        
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My Arsenal</span>
+          <h2 class="section-title">Tech & <span class="gradient-text">Marketing Skills</span></h2>
+        </div>
+        
+        <div class="skills-container">
+          <!-- Marketing Skills -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">
+              <i class='bx bx-trending-up icon'></i> Digital Marketing
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-tag">SEO</div>
+              <div class="skill-tag">Facebook Ads</div>
+              <div class="skill-tag">Google Ads</div>
+              <div class="skill-tag">Social Media Marketing</div>
+              <div class="skill-tag">Content Writing</div>
+              <div class="skill-tag">Email Marketing</div>
+              <div class="skill-tag">Google Analytics</div>
+              <div class="skill-tag">GTM</div>
+              <div class="skill-tag">Keyword Research</div>
+              <div class="skill-tag">Conversion Tracking</div>
+            </div>
+          </div>
+          
+          <!-- Dev Skills -->
+          <div class="skills-category reveal reveal-delay-1">
+            <h3 class="skills-category-title">
+              <i class='bx bx-code-alt icon'></i> Web Development
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-tag">HTML5</div>
+              <div class="skill-tag">CSS3</div>
+              <div class="skill-tag">JavaScript (ES6+)</div>
+              <div class="skill-tag">React</div>
+              <div class="skill-tag">TypeScript</div>
+              <div class="skill-tag">Vite</div>
+              <div class="skill-tag">Tailwind CSS</div>
+              <div class="skill-tag">Firebase</div>
+              <div class="skill-tag">Supabase</div>
+              <div class="skill-tag">Git/GitHub</div>
+              <div class="skill-tag">Figma</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="section" style="background: var(--clr-bg-card);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Investment</span>
+          <h2 class="section-title">How I Price My <span class="gradient-text">Services</span></h2>
+          <p class="section-subtitle">Clear packages, no hourly guessing.</p>
+        </div>
+        
+        <div class="pricing-tabs reveal">
+          <button class="pricing-tab active" data-pricing-tab="hourly">Hourly Based</button>
+          <button class="pricing-tab" data-pricing-tab="project">Project Based</button>
+        </div>
+        
+        <div class="pricing-panels">
+          <!-- Hourly Based Panel -->
+          <div class="pricing-panel active reveal reveal-delay-1" id="pricing-hourly">
+            <div class="price-card glass-card popular">
+              <div class="price-name">Digital Marketing</div>
+              <div class="price-amount">$50<span>/hr</span></div>
+              <div class="price-for">Strategy, SEO & Ads Management</div>
+              <div class="price-features">
+                <div class="price-feature"><i class='bx bx-check'></i> Comprehensive SEO Optimization</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Facebook Ads Management</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Google Ads Search & Display</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Social Media Content Strategy</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Monthly Reporting & Analytics</div>
+              </div>
+              <div class="price-outcome">"Flexible, high-impact marketing support designed to scale your brand."</div>
+              <button class="btn btn-primary" onclick="openBookingModal('Digital Marketing (Hourly)')">Book Now</button>
+            </div>
+            
+            <div class="price-card glass-card">
+              <div class="price-name">Web Development</div>
+              <div class="price-amount">$50<span>/hr</span></div>
+              <div class="price-for">Custom Builds & Optimizations</div>
+              <div class="price-features">
+                <div class="price-feature"><i class='bx bx-check'></i> High-Performance React/Vite Apps</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Core Web Vitals Optimization</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Custom Feature Integration</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Landing Page UI/UX Tweaks</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Bug Fixes & Site Maintenance</div>
+              </div>
+              <div class="price-outcome">"Fast, reliable tech execution to keep your business running smoothly."</div>
+              <button class="btn btn-primary" onclick="openBookingModal('Web Development (Hourly)')">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Project Based Panel -->
+          <div class="pricing-panel reveal" id="pricing-project">
+            <div class="price-card glass-card popular">
+              <div class="price-name">AI Automation System</div>
+              <div class="price-amount" style="font-size: 2.5rem;">Custom Quote</div>
+              <div class="price-for">End-to-end operational efficiency</div>
+              <div class="price-features">
+                <div class="price-feature"><i class='bx bx-check'></i> Pre-designed Workflow Architecture</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Lead Capture & CRM Routing</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Smart Email & SMS Follow-ups</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Setup on Zapier, Make or n8n</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Dedicated Post-launch Support</div>
+              </div>
+              <div class="price-outcome">"A plug-and-play automated system that handles repetitive tasks while you sleep."</div>
+              <button class="btn btn-primary" onclick="openBookingModal('AI Automation Project')">Get a Quote</button>
+            </div>
+            
+            <div class="price-card glass-card">
+              <div class="price-name">Full Funnel Build</div>
+              <div class="price-amount" style="font-size: 2.5rem;">Custom Quote</div>
+              <div class="price-for">Launch-ready marketing engines</div>
+              <div class="price-features">
+                <div class="price-feature"><i class='bx bx-check'></i> High-converting Landing Page</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Multi-step Email Nurture Seq</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Analytics Tracking Setup</div>
+                <div class="price-feature"><i class='bx bx-check'></i> Ad Creative & Copy Strategy</div>
+                <div class="price-feature"><i class='bx bx-check'></i> A/B Testing Framework</div>
+              </div>
+              <div class="price-outcome">"From ad click to purchase, a unified funnel built to maximize conversion."</div>
+              <button class="btn btn-secondary" onclick="openBookingModal('Full Funnel Build Project')">Get a Quote</button>
+            </div>
+          </div>
+        </div>
+        
+        <p class="pricing-disclaimer reveal">
+          * Prices vary slightly based on complexity and timeline. Book a 30-minute audit to get an exact quote.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+          <p class="section-subtitle">Have a project in mind or need higher conversions? Let's discuss how we can help you grow.</p>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-info reveal reveal-delay-1">
+            <div class="contact-info-cards">
+              <div class="contact-card glass-card">
+                <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+                <div class="contact-card-title">Email</div>
+                <div class="contact-card-value"><a href="mailto:jimjaaj@gmail.com">jimjaaj@gmail.com</a></div>
+              </div>
+              <div class="contact-card glass-card">
+                <div class="contact-card-title" style="margin-top:20px; text-transform:uppercase; letter-spacing:1px; font-size:var(--fs-xs);">Let's collaborate</div>
+              </div>
+              <div class="contact-card glass-card">
+                <div class="contact-icon"><i class='bx bx-phone'></i></div>
+                <div class="contact-card-title">Phone</div>
+                <div class="contact-card-value">01852363235</div>
+              </div>
+              <div class="contact-card glass-card">
+                <div class="contact-icon"><i class='bx bxl-whatsapp'></i></div>
+                <div class="contact-card-title">WhatsApp</div>
+                <div class="contact-card-value">01852363235</div>
+              </div>
+            </div>
+            
+            <div class="glass-card" style="padding: var(--sp-6);">
+              <h3 style="margin-bottom: var(--sp-4);">Location</h3>
+              <p style="color: var(--clr-text-secondary); margin-bottom: var(--sp-4);">
+                <i class='bx bx-map' style="color: var(--clr-secondary);"></i> Dhaka, Bangladesh
+              </p>
+              <div style="width: 100%; height: 200px; background: rgba(0,0,0,0.2); border-radius: var(--radius-md); overflow: hidden;">
+                <!-- Placeholder for map iframe if needed, static gradient for design -->
+                <div style="width:100%; height:100%; background: var(--grad-card); display:flex; align-items:center; justify-content:center; color: var(--clr-text-muted);">
+                  Dhaka, BD
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container reveal reveal-delay-2">
+            <div class="glass-card contact-form">
+              <h3 style="margin-bottom: var(--sp-6); font-size: var(--fs-xl);">Send me a message</h3>
+              <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="c_name">Name</label>
+                    <input type="text" id="c_name" class="form-input" placeholder="John Doe" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="c_email">Email</label>
+                    <input type="email" id="c_email" class="form-input" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="c_subject">Subject</label>
+                  <input type="text" id="c_subject" class="form-input" placeholder="Project Inquiry" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="c_message">Message</label>
+                  <textarea id="c_message" class="form-input" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Send Message <i class='bx bx-send'></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-dot"></span> Jim
+        </div>
+        <p class="footer-desc">
+          Building fast, scalable web solutions and optimizing digital marketing strategies to help businesses grow.
+        </p>
+        <div class="social-links" style="justify-content: center; flex-wrap: wrap; gap: var(--sp-4);">
+          <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="btn btn-secondary" style="border-color: #0A66C2; color: #f1f5f9;"><i class='bx bxl-linkedin' style="color: #0A66C2; font-size: 1.25rem;"></i> LinkedIn</a>
+          <a href="https://github.com/Jim5225" target="_blank" class="btn btn-secondary" style="border-color: #ffffff; color: #f1f5f9;"><i class='bx bxl-github' style="font-size: 1.25rem;"></i> GitHub</a>
+          <a href="https://www.facebook.com/jayedalafroz.jim.5" target="_blank" class="btn btn-secondary" style="border-color: #1877F2; color: #f1f5f9;"><i class='bx bxl-facebook' style="color: #1877F2; font-size: 1.25rem;"></i> Facebook</a>
+          <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="btn btn-secondary" style="border-color: #E4405F; color: #f1f5f9;"><i class='bx bxl-instagram' style="color: #E4405F; font-size: 1.25rem;"></i> Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Jayed Al Afroz Jim. All rights reserved.</p>
+        <div style="display: flex; gap: var(--sp-4);">
+          <a href="./admin.html" style="font-size: 12px; color: var(--clr-text-muted);">Admin Panel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Book a Free Consultation</h3>
+        <button class="modal-close" onclick="closeBookingModal()">
+          <i class='bx bx-x' style="font-size: 24px;"></i>
+        </button>
+      </div>
+      
+      <p style="color: var(--clr-text-secondary); margin-bottom: var(--sp-6);">
+        Let's discuss your project goals and how we can achieve them together.
+      </p>
+      
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group" id="packageField" style="display: none;">
+          <label class="form-label">Interested In Package:</label>
+          <div class="form-input" id="packageValue" style="color: var(--clr-secondary); font-weight: bold; background: rgba(37,99,235,0.1); border-color: var(--clr-primary);"></div>
+          <input type="hidden" id="b_package">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="b_name">Full Name</label>
+            <input type="text" id="b_name" class="form-input" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="b_email">Email Address</label>
+            <input type="email" id="b_email" class="form-input" placeholder="john@example.com" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="b_date">Preferred Date</label>
+            <input type="date" id="b_date" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="b_time">Preferred Time</label>
+            <input type="time" id="b_time" class="form-input" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" style="margin-bottom: var(--sp-3);">Choose Platform for Meeting</label>
+          <div style="display: flex; gap: var(--sp-6); align-items: center;">
+            <label style="display: flex; align-items: center; gap: var(--sp-2); cursor: pointer; color: var(--clr-text-secondary); padding: var(--sp-2) var(--sp-4); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); border-color: rgba(219, 68, 55, 0.4);">
+              <input type="radio" name="b_platform" value="Google Meet" checked style="width: 16px; height: 16px; accent-color: #DB4437;">
+              <i class='bx bxl-google' style="color: #DB4437; font-size: 1.2rem;"></i> Google Meet
+            </label>
+            <label style="display: flex; align-items: center; gap: var(--sp-2); cursor: pointer; color: var(--clr-text-secondary); padding: var(--sp-2) var(--sp-4); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); border-color: rgba(37, 211, 102, 0.4);">
+              <input type="radio" name="b_platform" value="WhatsApp" style="width: 16px; height: 16px; accent-color: #25D366;">
+              <i class='bx bxl-whatsapp' style="color: #25D366; font-size: 1.2rem;"></i> WhatsApp
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="b_message">Project Details</label>
+          <textarea id="b_message" class="form-input" placeholder="Briefly describe what you're looking to achieve..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Confirm Booking Setup
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i class='bx bx-check-circle' style="color: var(--clr-success); font-size: 20px;"></i>
+    <span id="toastMsg">Action successful</span>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Lightweight Canvas Particles Config -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <script type="module" src="./js/utils.js"></script>
+  <script type="module" src="./js/portfolio.js"></script>
+  <script type="module" src="./js/booking.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

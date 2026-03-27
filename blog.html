@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Jayed Al Afroz Jim</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./css/design-system.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/blog.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="./index.html" class="nav-logo">
+        <span class="logo-dot"></span> Jim
+      </a>
+      <div class="nav-links">
+        <a href="./index.html#home" class="nav-link">Home</a>
+        <a href="./index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="./blog.html" class="nav-link active">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <h1 class="blog-hero-title">Insights & <span class="gradient-text">Strategies</span></h1>
+        <p class="blog-hero-desc">Deep dives into SEO, digital marketing tactics, and modern web development architectures.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-container">
+          <!-- Main Blog Content -->
+          <div class="blog-list" id="blog-list">
+            <!-- Populated by blog.js -->
+          </div>
+          
+          <!-- Sidebar -->
+          <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Search</h3>
+              <div class="search-form">
+                <input type="text" id="blog-search" class="search-input" placeholder="Search articles...">
+                <i class='bx bx-search search-btn'></i>
+              </div>
+            </div>
+            
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="category-list" id="category-list">
+                <!-- Categories populated by JS -->
+              </ul>
+            </div>
+            
+            <div class="sidebar-widget" style="background: var(--grad-primary); border: none;">
+              <h3 class="widget-title" style="color: white; border-bottom-color: rgba(255,255,255,0.2);">Need an Expert?</h3>
+              <p style="color: rgba(255,255,255,0.8); font-size: var(--fs-sm); margin-bottom: var(--sp-4);">
+                Stop guessing with your marketing. Let me audit your current setup and build a high-performance funnel perfectly tailored for your brand.
+              </p>
+              <a href="./index.html#contact" class="btn" style="background: white; color: var(--clr-primary); width: 100%;">
+                Get Free Audit
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: var(--clr-text-secondary);">&copy; <script>document.write(new Date().getFullYear())</script> Jayed Al Afroz Jim. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/utils.js"></script>
+  <script type="module" src="./js/blog.js"></script>
+</body>
+</html>
