@@ -365,27 +365,54 @@ textarea.form-input {
 }
 
 .social-link {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-text-muted);
+  color: var(--clr-text-secondary);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
   transition: all var(--dur-normal) var(--ease-out);
 }
 
-.social-link:hover {
-  color: var(--clr-secondary);
-  border-color: var(--clr-border-glow);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+.social-link i {
+  font-size: 1.5rem;
 }
 
-.social-link svg {
-  width: 20px;
-  height: 20px;
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Brand Colors */
+.social-link.link-linkedin:hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+}
+
+.social-link.link-github:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.social-link.link-facebook:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.link-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(214, 36, 159, 0.4);
 }
 
 /* ---------- Toast Notification ---------- */
