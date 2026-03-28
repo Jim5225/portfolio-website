@@ -8,10 +8,16 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": ["portfolio", "digital-marketing", "web-developer", "seo"],
+  "keywords": [
+    "portfolio",
+    "digital-marketing",
+    "web-developer",
+    "seo"
+  ],
   "author": "Jayed Al Afroz Jim",
   "license": "MIT",
   "devDependencies": {
+    "terser": "^5.46.1",
     "vite": "^6.2.4"
   }
 }
