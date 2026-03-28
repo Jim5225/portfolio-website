@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const words = [
-      'Digital Marketer ',
-      'SEO Expert ',
-      'Performance Marketer ',
-      'Web Developer '
+      'AI Automation Systems ',
+      'Social Media Ads ',
+      'High-Converting Funnels ',
+      'Sales-Driven Websites '
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -146,28 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCount();
   });
 
-  // PRICING TABS (Administers UX logic structure for Service pricing)
-  const pricingTabs = document.querySelectorAll('.pricing-tab');
-  const pricingPanels = document.querySelectorAll('.pricing-panel');
-  
-  pricingTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetId = `pricing-${tab.getAttribute('data-pricing-tab')}`;
-      
-      // Update Tabs active status
-      pricingTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      
-      // Update Panels active status
-      pricingPanels.forEach(panel => {
-        if (panel.id === targetId) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
-    });
-  });
+  // PRICING TABS - Redundant now but kept as stub if needed for future
+  // The new layout is a static 3-column grid
 
   // INIT PORTFOLIO MODULE
   if (document.getElementById('portfolio-grid')) {
