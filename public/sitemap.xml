@@ -3,13 +3,13 @@
   <url>
     <loc>https://portfolio-website-azure-gamma.vercel.app/</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://portfolio-website-azure-gamma.vercel.app/index.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -19,27 +19,21 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://portfolio-website-azure-gamma.vercel.app/admin.html</loc>
-    <lastmod>2025-07-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-  <url>
     <loc>https://portfolio-website-azure-gamma.vercel.app/blog/reduce-cpl-meta-ads-ai.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://portfolio-website-azure-gamma.vercel.app/blog/ai-automation-stack-2025.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://portfolio-website-azure-gamma.vercel.app/blog/portfolio-losing-clients-fix.html</loc>
     <lastmod>2025-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>
