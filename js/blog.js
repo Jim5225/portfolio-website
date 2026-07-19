@@ -2,33 +2,34 @@
 // BLOG RENDERING LOGIC
 // ==========================================
 
+// BUG 06 FIX: Replaced generic placeholder posts with real, relevant content
 const blogPosts = [
   {
     id: 'b1',
-    title: 'Facebook Ads vs Google Ads: Which is Better for Your Business in 2025?',
-    slug: 'facebook-ads-guide',
-    category: 'Digital Marketing',
-    date: 'March 20, 2026',
+    title: 'How I Reduced a Client\'s Cost-Per-Lead by 47% Using Meta Ads + AI',
+    slug: 'reduce-cpl-meta-ads-ai',
+    category: 'Meta Ads',
+    date: 'June 15, 2025',
     image: './assets/images/project-marketing.png',
-    excerpt: 'Stop wasting ad spend. Learn the fundamental differences between search intent (Google) and interruption marketing (Meta) to maximize your ROAS.'
+    excerpt: 'Most businesses burn money on ads with no automation layer underneath. Here is the exact system I built that cut CPL by almost half in 6 weeks.'
   },
   {
     id: 'b2',
-    title: 'The Ultimate Technical SEO Checklist for React Applications',
-    slug: 'seo-tips-2025',
-    category: 'SEO',
-    date: 'February 15, 2026',
+    title: 'The AI Automation Stack Every Freelancer Needs to Know in 2025',
+    slug: 'ai-automation-stack-2025',
+    category: 'AI Automation',
+    date: 'July 1, 2025',
     image: './assets/images/project-seo-dashboard.png',
-    excerpt: 'SPAs often struggle with indexed content. Dive into SSR, prerendering, dynamic rendering, and schema markup techniques to fix crawling issues.'
+    excerpt: 'Make.com, n8n, or Zapier? I have tested all three extensively with real client work. Here is what I actually use and why.'
   },
   {
     id: 'b3',
-    title: 'Why Core Web Vitals Are the Most Important Metric for SaaS Landing Pages',
-    slug: 'web-performance',
-    category: 'Web Dev',
-    date: 'January 10, 2026',
+    title: 'Why Your Portfolio Is Losing You Clients (And Exactly How to Fix It)',
+    slug: 'portfolio-losing-clients-fix',
+    category: 'Freelancing',
+    date: 'July 10, 2025',
     image: './assets/images/project-landing-page.png',
-    excerpt: 'A 1-second delay in page load time reduces conversions by 7%. Discover optimization strategies using Vite, lazy loading, and modern image formats.'
+    excerpt: 'I have reviewed 50+ freelancer portfolios. The same 5 mistakes appear on almost all of them. Here is the checklist I use to audit and fix them fast.'
   }
 ];
 

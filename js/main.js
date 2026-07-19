@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupScrollObserver(stats, (el) => {
     const target = +el.getAttribute('data-target');
+    // BUG 02 FIX: Reset to 0 before animating (HTML has fallback values for bots/slow connections)
+    el.innerText = '0';
     const updateCount = () => {
       const current = +el.innerText;
       const increment = target / speed;
@@ -140,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerText = Math.ceil(current + increment);
         setTimeout(updateCount, 15);
       } else {
-        el.innerText = target + "+";
+        el.innerText = target + '+';
       }
     };
     updateCount();

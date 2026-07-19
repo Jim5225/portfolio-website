@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="./css/design-system.css">
   <link rel="stylesheet" href="./css/components.css">
   <link rel="stylesheet" href="./css/admin.css">
+  <!-- BUG 04 FIX: Auth gate — redirect if no valid token in localStorage -->
+  <script>
+    (function() {
+      var token = localStorage.getItem('admin_token');
+      if (!token || token !== 'jim_admin_2025') {
+        window.location.replace('./index.html');
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="admin-layout">

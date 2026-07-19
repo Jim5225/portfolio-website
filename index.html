@@ -17,7 +17,7 @@
   <meta property="og:description"
     content="I build systems that bring leads, automate workflows, and grow your business faster using AI-powered marketing.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/images/profile.jpg">
+  <meta property="og:image" content="https://portfolio-website-azure-gamma.vercel.app/assets/images/profile.jpg">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
 
   <!-- Boxicons for standard icons -->
@@ -102,8 +102,8 @@
         <div class="hero-content reveal">
           <div class="hero-subtitle">Hello, I'm Jayed Al Afroz Jim</div>
           <h1 class="hero-title">
-            <span class="static-text">I Help Businesses Get More Customers Using </span>
-            <span class="typewriter-text" id="typewriter"></span>
+            I Build AI-Powered Marketing Systems That Turn Traffic Into Revenue
+            <span class="typewriter-text" id="typewriter" aria-hidden="true"></span>
           </h1>
           <p class="hero-desc">
             From strategy to execution — I build systems that bring leads, automate workflows, and grow your business faster.
@@ -160,11 +160,12 @@
 
               <div class="about-stats">
                 <div class="stat-item">
-                  <span class="stat-num" data-target="5">0</span>
+                  <!-- BUG 02 FIX: hardcoded fallback; JS animates from 0 via data-target -->
+                  <span class="stat-num" data-target="2">2+</span>
                   <span class="stat-label">Years Exp</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-num" data-target="50">0</span>
+                  <span class="stat-num" data-target="15">15+</span>
                   <span class="stat-label">Projects</span>
                 </div>
               </div>
@@ -354,8 +355,9 @@
 
         <div class="tabs reveal">
           <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="marketing">Marketing & Ads</button>
+          <button class="tab-btn" data-filter="automation">AI Automation</button>
           <button class="tab-btn" data-filter="web">Web Development</button>
-          <button class="tab-btn" data-filter="marketing">Marketing & SEO</button>
         </div>
 
         <div class="portfolio-grid" id="portfolio-grid">
@@ -586,11 +588,9 @@
               style="color: #E4405F; font-size: 1.25rem;"></i> Instagram</a>
         </div>
       </div>
+      <!-- BUG 04 FIX: Admin link removed from public footer -->
       <div class="footer-bottom">
         <p>&copy; <span id="currentYear"></span> Jayed Al Afroz Jim. All rights reserved.</p>
-        <div style="display: flex; gap: var(--sp-4);">
-          <a href="./admin.html" style="font-size: 12px; color: var(--clr-text-muted);">Admin Panel</a>
-        </div>
       </div>
     </div>
   </footer>
