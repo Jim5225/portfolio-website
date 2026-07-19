@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jim5225.github.io/portfolio/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/index.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/index.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/blog.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/blog.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/admin.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/admin.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/blog/seo-tips-2025.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/blog/reduce-cpl-meta-ads-ai.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/blog/facebook-ads-guide.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/blog/ai-automation-stack-2025.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jim5225.github.io/portfolio/blog/web-performance.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://portfolio-website-azure-gamma.vercel.app/blog/portfolio-losing-clients-fix.html</loc>
+    <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

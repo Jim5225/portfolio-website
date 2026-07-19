@@ -10,9 +10,9 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         blog: resolve(__dirname, 'blog.html'),
         admin: resolve(__dirname, 'admin.html'),
-        blogSeoTips: resolve(__dirname, 'blog/seo-tips-2025.html'),
-        blogFacebookAds: resolve(__dirname, 'blog/facebook-ads-guide.html'),
-        blogWebPerformance: resolve(__dirname, 'blog/web-performance.html'),
+        blogReduceCpl: resolve(__dirname, 'blog/reduce-cpl-meta-ads-ai.html'),
+        blogAiAutomationStack: resolve(__dirname, 'blog/ai-automation-stack-2025.html'),
+        blogPortfolioLosingClients: resolve(__dirname, 'blog/portfolio-losing-clients-fix.html'),
       }
     },
     minify: 'terser',
