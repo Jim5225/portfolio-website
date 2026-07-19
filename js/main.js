@@ -1,6 +1,9 @@
 import { setupScrollObserver, debounce } from './utils.js';
 import { renderProjects, initPortfolioFilter } from './portfolio.js';
 import { initScrollReveal } from './useScrollReveal.js';
+import { testimonialsData } from '../src/data/testimonialsData.js';
+import { TestimonialCard } from './components/TestimonialCard.js';
+import { TrustBar } from './components/TrustBar.js';
 
 // ==========================================
 // MAIN INITIALIZATION LOGIC
@@ -131,6 +134,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('portfolio-grid')) {
     renderProjects('all');
     initPortfolioFilter();
+  }
+
+  // RENDER TRUST BAR
+  const trustContainer = document.getElementById('trust-bar-container');
+  if (trustContainer) {
+    trustContainer.innerHTML = TrustBar();
+  }
+
+  // RENDER TESTIMONIALS
+  const testimonialsGrid = document.getElementById('testimonials-grid');
+  if (testimonialsGrid) {
+    testimonialsGrid.innerHTML = testimonialsData.map(t => TestimonialCard(t)).join('');
   }
 
   // INITIALIZE PARTICLES BACKGROUND

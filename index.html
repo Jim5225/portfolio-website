@@ -73,8 +73,10 @@
       <div class="nav-links" id="nav-links">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
+        <a href="#portfolio" class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#process" class="nav-link">Process</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="./blog.html" class="nav-link">Blog</a>
@@ -152,12 +154,15 @@
       </a>
     </section>
 
+    <!-- TRUST BAR CONTAINER -->
+    <div id="trust-bar-container" class="container" style="margin-top: calc(-1 * var(--sp-6)); margin-bottom: var(--sp-6);"></div>
+
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">About Me</span>
-          <h2 class="section-title">Who I <span class="gradient-text">Am</span></h2>
+          <h2 class="section-title font-display">Who I <span class="gradient-text">Am</span></h2>
         </div>
 
         <div class="about-grid">
@@ -167,7 +172,6 @@
 
               <div class="about-stats">
                 <div class="stat-item">
-                  <!-- BUG 02 FIX: hardcoded fallback; JS animates from 0 via data-target -->
                   <span class="stat-num" data-target="2">2+</span>
                   <span class="stat-label">Years Exp</span>
                 </div>
@@ -180,7 +184,7 @@
           </div>
 
           <div class="about-content reveal reveal-delay-2">
-            <h3>Who I <span class="gradient-text">Am</span></h3>
+            <h3 class="font-display">Who I <span class="gradient-text">Am</span></h3>
             <p>
               I don't just run campaigns — I architect growth systems. AI automation + performance ads + conversion development, working together so your revenue grows without adding headcount.
             </p>
@@ -213,12 +217,48 @@
       </div>
     </section>
 
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section" style="background: var(--clr-bg-card);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">My Works</span>
+          <h2 class="section-title font-display">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="tabs reveal">
+          <button class="tab-btn active" data-filter="all">All</button>
+          <button class="tab-btn" data-filter="marketing">Marketing & Ads</button>
+          <button class="tab-btn" data-filter="automation">AI Automation</button>
+          <button class="tab-btn" data-filter="web">Web Development</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Reviews</span>
+          <h2 class="section-title font-display">Client <span class="gradient-text">Success Stories</span></h2>
+          <p class="section-subtitle">Real feedback from clients who scaled their lead generation and operations.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-6);">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
     <!-- SERVICES SECTION -->
-    <section id="services" class="section">
+    <section id="services" class="section" style="background: var(--clr-bg-card);">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">My Expertise</span>
-          <h2 class="section-title">Power <span class="gradient-text">Services</span></h2>
+          <h2 class="section-title font-display">Power <span class="gradient-text">Services</span></h2>
           <p class="section-subtitle">Simplified, high-impact solutions to scale your business.</p>
         </div>
 
@@ -226,7 +266,7 @@
           <!-- Digital Marketing & Lead Gen -->
           <div class="service-card glass-card reveal highlight-card">
             <div class="service-icon"><i class='bx bx-trending-up'></i></div>
-            <h3 class="service-title">Digital Marketing & Lead Gen</h3>
+            <h3 class="service-title font-display">Digital Marketing & Lead Gen</h3>
             <p class="service-desc">I help you attract and convert customers through proven growth strategies.</p>
             <ul class="service-list" style="list-style: none; margin-top: var(--sp-4); font-size: var(--fs-sm); color: var(--clr-text-secondary);">
               <li><i class='bx bx-check-circle' style="color: var(--clr-primary-light); margin-right: 8px;"></i> Social Media Content Strategy</li>
@@ -242,7 +282,7 @@
           <!-- Website Development -->
           <div class="service-card glass-card reveal reveal-delay-1">
             <div class="service-icon"><i class='bx bx-code-alt'></i></div>
-            <h3 class="service-title">Website Development</h3>
+            <h3 class="service-title font-display">Website Development</h3>
             <p class="service-desc">I build modern websites that actually convert visitors into customers.</p>
             <ul class="service-list" style="list-style: none; margin-top: var(--sp-4); font-size: var(--fs-sm); color: var(--clr-text-secondary);">
               <li><i class='bx bx-check-circle' style="color: var(--clr-primary-light); margin-right: 8px;"></i> Modern, Responsive Design</li>
@@ -258,7 +298,7 @@
           <!-- AI Automation -->
           <div class="service-card glass-card reveal reveal-delay-2">
             <div class="service-icon"><i class='bx bx-bot'></i></div>
-            <h3 class="service-title">AI & Marketing Automation</h3>
+            <h3 class="service-title font-display">AI & Marketing Automation</h3>
             <p class="service-desc">Save time and scale faster by automating your repetitive workflows.</p>
             <ul class="service-list" style="list-style: none; margin-top: var(--sp-4); font-size: var(--fs-sm); color: var(--clr-text-secondary);">
               <li><i class='bx bx-check-circle' style="color: var(--clr-primary-light); margin-right: 8px;"></i> CRM & Lead Routing</li>
@@ -275,112 +315,50 @@
     </section>
 
     <!-- HOW I WORK SECTION -->
-    <section id="process" class="section" style="background: var(--clr-bg-card);">
+    <section id="process" class="section">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">My Process</span>
-          <h2 class="section-title">How I <span class="gradient-text">Work</span></h2>
+          <h2 class="section-title font-display">How I <span class="gradient-text">Work</span></h2>
         </div>
 
         <div class="process-grid">
           <div class="process-item reveal">
             <div class="process-number">01</div>
-            <h3 class="process-title">Understand Your Business</h3>
+            <h3 class="process-title font-display">Understand Your Business</h3>
             <p class="process-desc">I analyze your goals, audience, and current strategy to find growth opportunities.</p>
           </div>
           <div class="process-item reveal reveal-delay-1">
             <div class="process-number">02</div>
-            <h3 class="process-title">Build Strategy</h3>
+            <h3 class="process-title font-display">Build Strategy</h3>
             <p class="process-desc">Using AI + experience, I create a customized growth plan tailored to your needs.</p>
           </div>
           <div class="process-item reveal reveal-delay-2">
             <div class="process-number">03</div>
-            <h3 class="process-title">Execute Fast</h3>
+            <h3 class="process-title font-display">Execute Fast</h3>
             <p class="process-desc">Content, ads, automation — everything is implemented quickly with precision.</p>
           </div>
           <div class="process-item reveal reveal-delay-3">
             <div class="process-number">04</div>
-            <h3 class="process-title">Optimize & Scale</h3>
+            <h3 class="process-title font-display">Optimize & Scale</h3>
             <p class="process-desc">I improve performance based on real data and help you grow consistently.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE ME SECTION -->
-    <section id="why-me" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">Why Me</span>
-          <h2 class="section-title">Why Work <span class="gradient-text">With Me?</span></h2>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-item reveal">
-            <i class='bx bx-bolt-circle why-icon'></i>
-            <div>
-              <h3 class="why-title">AI-Powered Execution</h3>
-              <p class="why-desc">Faster and smarter implementation than traditional methods.</p>
-            </div>
-          </div>
-          <div class="why-item reveal reveal-delay-1">
-            <i class='bx bx-time-five why-icon'></i>
-            <div>
-              <h3 class="why-title">Async-First</h3>
-              <p class="why-desc">Fully remote, timezone-flexible. Detailed async updates so you always know exactly what's being built and why.</p>
-            </div>
-          </div>
-          <div class="why-item reveal reveal-delay-2">
-            <i class='bx bx-target-lock why-icon'></i>
-            <div>
-              <h3 class="why-title">Results-Driven</h3>
-              <p class="why-desc">I focus on actual growth and ROI, not just completing tasks.</p>
-            </div>
-          </div>
-          <div class="why-item reveal reveal-delay-3">
-            <i class='bx bx-trending-up why-icon'></i>
-            <div>
-              <h3 class="why-title">Scalable Systems</h3>
-              <p class="why-desc">I build long-term systems that grow with your business.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" class="section" style="background: var(--clr-bg-card);">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-label">My Works</span>
-          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-        </div>
-
-        <div class="tabs reveal">
-          <button class="tab-btn active" data-filter="all">All</button>
-          <button class="tab-btn" data-filter="marketing">Marketing & Ads</button>
-          <button class="tab-btn" data-filter="automation">AI Automation</button>
-          <button class="tab-btn" data-filter="web">Web Development</button>
-        </div>
-
-        <div class="portfolio-grid" id="portfolio-grid">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
-
     <!-- SKILLS SECTION -->
-    <section id="skills" class="section">
+    <section id="skills" class="section" style="background: var(--clr-bg-card);">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">My Arsenal</span>
-          <h2 class="section-title">Tech & <span class="gradient-text">Marketing Skills</span></h2>
+          <h2 class="section-title font-display">Tech & <span class="gradient-text">Marketing Skills</span></h2>
         </div>
 
         <div class="skills-container">
           <!-- Marketing Skills -->
           <div class="skills-category reveal">
-            <h3 class="skills-category-title">
+            <h3 class="skills-category-title font-display">
               <i class='bx bx-trending-up icon'></i> Digital Marketing
             </h3>
             <div class="skills-grid">
@@ -399,7 +377,7 @@
 
           <!-- Dev Skills -->
           <div class="skills-category reveal reveal-delay-1">
-            <h3 class="skills-category-title">
+            <h3 class="skills-category-title font-display">
               <i class='bx bx-code-alt icon'></i> Web Development
             </h3>
             <div class="skills-grid">
@@ -421,11 +399,11 @@
     </section>
 
     <!-- PRICING SECTION -->
-    <section id="pricing" class="section" style="background: var(--clr-bg-card);">
+    <section id="pricing" class="section">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">Investment</span>
-          <h2 class="section-title">Simple, <span class="gradient-text">Transparent Pricing</span></h2>
+          <h2 class="section-title font-display">Simple, <span class="gradient-text">Transparent Pricing</span></h2>
           <p class="section-subtitle">No hidden fees. Choose the plan that fits your growth stage.</p>
         </div>
 
