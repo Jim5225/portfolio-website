@@ -24,7 +24,7 @@
 
 .blog-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
   gap: var(--sp-12);
   margin-top: var(--sp-12);
 }
@@ -32,7 +32,8 @@
 /* ---------- Blog Cards ---------- */
 .blog-list {
   display: grid;
-  gap: var(--sp-8);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--sp-6);
 }
 
 .blog-card {
