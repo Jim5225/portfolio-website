@@ -1,3 +1,7 @@
+import projectMarketing from '../../assets/images/project-marketing.webp';
+import projectLandingPage from '../../assets/images/project-landing-page.webp';
+import projectSeoDashboard from '../../assets/images/project-seo-dashboard.webp';
+
 export const projectsData = [
   {
     id: 1,
@@ -8,7 +12,7 @@ export const projectsData = [
     solution: "Built automated lead qualification funnel + Meta Ads retargeting system with AI scoring.",
     result: "Reduced CPL by 47%. Conversion rate grew to 3.2% in 6 weeks.",
     tools: ["Make.com", "Meta Ads Manager", "ActiveCampaign"],
-    image: "/assets/project1.png",
+    image: projectMarketing,
     liveUrl: "#",
     githubUrl: null,
     featured: true
@@ -22,7 +26,7 @@ export const projectsData = [
     solution: "Redesigned checkout UX, added email automation, exit-intent popups, and abandoned cart sequences.",
     result: "Cart abandonment dropped to 71%. Revenue up 28% in 30 days.",
     tools: ["React", "Tailwind CSS", "Klaviyo"],
-    image: "/assets/project2.png",
+    image: projectLandingPage,
     liveUrl: "#",
     githubUrl: "https://github.com/Jim5225",
     featured: true
@@ -36,7 +40,7 @@ export const projectsData = [
     solution: "Built automated multi-source data pipeline connecting Meta Ads, GA4, and Google Sheets with auto-email delivery.",
     result: "Report generation time: 12 hours → 8 minutes. Fully automated.",
     tools: ["n8n", "Google Sheets API", "GA4", "Meta Ads API"],
-    image: "/assets/project3.png",
+    image: projectSeoDashboard,
     liveUrl: "#",
     githubUrl: null,
     featured: false

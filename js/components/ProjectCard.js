@@ -27,7 +27,7 @@ export function ProjectCard({ title, category, tags, result, tools, image, liveU
         <div class="project-actions" style="margin-top: auto; display: flex; gap: var(--sp-3);">
           <a href="${liveUrl}" target="${liveUrl !== '#' ? '_blank' : '_self'}" class="btn btn-primary btn-sm" style="flex-grow: 1;">Live Demo</a>
           ${githubUrl ? `
-            <a href="${githubUrl}" target="_blank" class="btn btn-secondary btn-sm" style="padding: var(--sp-2) var(--sp-3);">
+            <a href="${githubUrl}" target="_blank" class="btn btn-secondary btn-sm" style="padding: var(--sp-2) var(--sp-3);" aria-label="View Source on GitHub">
               <i class='bx bxl-github' style="font-size: 1.25rem;"></i>
             </a>
           ` : ''}
