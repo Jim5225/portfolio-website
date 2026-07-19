@@ -525,3 +525,15 @@ textarea.form-input {
     display: flex;
   }
 }
+
+/* ---------- Details / Accordion Styles ---------- */
+details[open] summary i {
+  transform: rotate(180deg);
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  outline: none;
+}
+

@@ -160,4 +160,32 @@ document.addEventListener('DOMContentLoaded', () => {
       retina_detect: true
     });
   }
+
+  // LOAD CALENDLY SCRIPT DYNAMICALLY
+  const calendlyWidget = document.querySelector('.calendly-inline-widget');
+  if (calendlyWidget) {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  // GLOBAL EMAIL COPY HANDLER
+  window.copyEmailToClipboard = function(e) {
+    e.preventDefault();
+    navigator.clipboard.writeText('jimjaaj@gmail.com').then(() => {
+      import('./utils.js').then(module => {
+        module.showToast('Email copied to clipboard!', 'success');
+      });
+      const textEl = document.getElementById('email-btn-text');
+      if (textEl) {
+        textEl.textContent = 'Copied!';
+        setTimeout(() => {
+          textEl.textContent = 'jimjaaj@gmail.com (Copy)';
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  };
 });
