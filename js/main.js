@@ -1,5 +1,6 @@
 import { setupScrollObserver, debounce } from './utils.js';
 import { renderProjects, initPortfolioFilter } from './portfolio.js';
+import { initScrollReveal } from './useScrollReveal.js';
 
 // ==========================================
 // MAIN INITIALIZATION LOGIC
@@ -120,33 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial run for scroll logic
   handleScroll();
 
-  // REVEAL ANIMATIONS ON SCROLL
-  const revealElements = document.querySelectorAll('.reveal');
-  setupScrollObserver(revealElements, (el) => {
-    el.classList.add('visible');
-  });
-
-  // NUMBER COUNTERS (Animate integers up to value)
-  const stats = document.querySelectorAll('.stat-num');
-  const speed = 200; // The lower the slower
-
-  setupScrollObserver(stats, (el) => {
-    const target = +el.getAttribute('data-target');
-    // BUG 02 FIX: Reset to 0 before animating (HTML has fallback values for bots/slow connections)
-    el.innerText = '0';
-    const updateCount = () => {
-      const current = +el.innerText;
-      const increment = target / speed;
-
-      if (current < target) {
-        el.innerText = Math.ceil(current + increment);
-        setTimeout(updateCount, 15);
-      } else {
-        el.innerText = target + '+';
-      }
-    };
-    updateCount();
-  });
+  // REVEAL ANIMATIONS ON SCROLL & STAT COUNTERS
+  initScrollReveal();
 
   // PRICING TABS - Redundant now but kept as stub if needed for future
   // The new layout is a static 3-column grid

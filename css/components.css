@@ -156,15 +156,15 @@
 }
 
 .btn-primary {
-  background: var(--grad-primary);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  background: var(--clr-accent);
+  color: #0A0A0F;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
 }
 .btn-primary:hover {
-  background: var(--grad-primary-hover);
+  background: #D97706;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-  color: #fff;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  color: #0A0A0F;
 }
 
 .btn-secondary {
