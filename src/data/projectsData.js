@@ -1,48 +1,144 @@
-import projectMarketing from '../../assets/images/project-marketing.webp';
-import projectLandingPage from '../../assets/images/project-landing-page.webp';
-import projectSeoDashboard from '../../assets/images/project-seo-dashboard.webp';
+import projectRestaurant from '../../assets/images/project-restaurant.png';
+import projectClothing from '../../assets/images/project-clothing.png';
+import projectClinic from '../../assets/images/project-clinic.png';
+import projectMetaDashboard from '../../assets/images/project-meta-dashboard.png';
+import projectEmail from '../../assets/images/project-email.png';
+import projectSocial from '../../assets/images/project-social.png';
 
 export const projectsData = [
   {
     id: 1,
-    title: "AI Lead Generation System for B2B SaaS",
-    category: "Marketing & SEO",
-    tags: ["Meta Ads", "AI Automation", "CRM"],
-    problem: "Client spent $2k/month on ads with 0.8% conversion rate.",
-    solution: "Built automated lead qualification funnel + Meta Ads retargeting system with AI scoring.",
-    result: "Reduced CPL by 47%. Conversion rate grew to 3.2% in 6 weeks.",
-    tools: ["Make.com", "Meta Ads Manager", "ActiveCampaign"],
-    image: projectMarketing,
+    title: "AI Restaurant Assistant & Reservation Bot",
+    category: "AI Automation",
+    tags: ["WhatsApp API", "n8n", "OpenAI"],
+    target: "Restaurants & Hospitality",
+    problem: "Missed phone reservations and manual order tracking during peak dining hours.",
+    solution: "Automated AI table booking via WhatsApp, menu recommendation engine, order tracking, and Google review collection.",
+    result: "+40% Table Bookings & 4.9★ Google Review Growth",
+    features: [
+      "AI Table Booking",
+      "WhatsApp Integration",
+      "Menu Recommendation",
+      "Order Tracking",
+      "FAQ Bot",
+      "Google Review Collection"
+    ],
+    tools: ["n8n", "OpenAI/Gemini", "WhatsApp API", "Google Sheets", "Gmail"],
+    image: projectRestaurant,
     liveUrl: "#",
     githubUrl: null,
     featured: true
   },
   {
     id: 2,
-    title: "E-commerce Conversion Funnel Rebuild",
-    category: "Web Development",
-    tags: ["React", "Tailwind", "Supabase"],
-    problem: "Shopify store had 94% cart abandonment rate.",
-    solution: "Redesigned checkout UX, added email automation, exit-intent popups, and abandoned cart sequences.",
-    result: "Cart abandonment dropped to 71%. Revenue up 28% in 30 days.",
-    tools: ["React", "Tailwind CSS", "Klaviyo"],
-    image: projectLandingPage,
+    title: "AI Clothing Brand E-Commerce Automation",
+    category: "AI Automation",
+    tags: ["Shopify", "Make.com", "OpenAI"],
+    target: "Fashion & Apparel Brands",
+    problem: "High abandoned cart rate and delayed customer support inquiries.",
+    solution: "Built end-to-end order processing, inventory alert automation, Facebook Messenger customer support AI, and abandoned cart email sequences.",
+    result: "-35% Cart Abandonment & 3.8x Ad ROAS",
+    features: [
+      "Order Automation",
+      "Inventory Alerts",
+      "Customer Support AI",
+      "FB Messenger Bot",
+      "Email Automation",
+      "Abandoned Cart Reminder"
+    ],
+    tools: ["Make.com", "Shopify", "OpenAI", "Gmail", "Meta Ads API"],
+    image: projectClothing,
     liveUrl: "#",
-    githubUrl: "https://github.com/Jim5225",
+    githubUrl: null,
     featured: true
   },
   {
     id: 3,
-    title: "Automated Client Reporting Dashboard",
+    title: "AI Clinic & Doctor Assistant System",
     category: "AI Automation",
-    tags: ["n8n", "Google Sheets", "Zapier"],
-    problem: "Agency spent 12 hours/week manually compiling client reports.",
-    solution: "Built automated multi-source data pipeline connecting Meta Ads, GA4, and Google Sheets with auto-email delivery.",
-    result: "Report generation time: 12 hours → 8 minutes. Fully automated.",
-    tools: ["n8n", "Google Sheets API", "GA4", "Meta Ads API"],
-    image: projectSeoDashboard,
+    tags: ["Healthcare", "WhatsApp", "Google Calendar"],
+    target: "Medical Clinics & Private Practices",
+    problem: "High patient no-show rates and cluttered phone lines for appointment booking.",
+    solution: "Deployed 24/7 WhatsApp AI receptionist for appointment booking, automated SMS/WhatsApp reminders, prescription follow-ups, and Google Calendar sync.",
+    result: "82% Reduction in No-Shows & 15+ Hours Saved/Week",
+    features: [
+      "Appointment Booking",
+      "Patient Reminders",
+      "FAQ AI Bot",
+      "Prescription Reminders",
+      "WhatsApp Chatbot",
+      "Google Calendar Sync"
+    ],
+    tools: ["n8n", "WhatsApp API", "Google Calendar API", "OpenAI"],
+    image: projectClinic,
     liveUrl: "#",
     githubUrl: null,
-    featured: false
+    featured: true
+  },
+  {
+    id: 4,
+    title: "Meta Ads & Performance Analytics Dashboard",
+    category: "Marketing & SEO",
+    tags: ["Meta Ads", "Analytics", "ROAS Tracking"],
+    target: "E-Commerce & B2B Brands",
+    problem: "Manual spreadsheet reporting and lack of real-time ad performance insights.",
+    solution: "Created live campaign performance dashboard tracking ROAS, CPC, lead pipeline, and automated AI optimization suggestions.",
+    result: "4.8x ROAS & Instant Campaign Optimization Alerts",
+    features: [
+      "Campaign Dashboard",
+      "ROAS & CPC Tracking",
+      "Lead Funnel Analytics",
+      "Interactive Charts",
+      "AI Insights Engine"
+    ],
+    tools: ["Meta Ads API", "Google Analytics 4", "React", "Looker Studio"],
+    image: projectMetaDashboard,
+    liveUrl: "#",
+    githubUrl: null,
+    featured: true
+  },
+  {
+    id: 5,
+    title: "Email Marketing & AI Lead Nurturing Automation",
+    category: "Marketing & SEO",
+    tags: ["Email Automation", "AI Copywriting", "Lead Scoring"],
+    target: "SaaS & B2B Agencies",
+    problem: "Cold leads dropping off without structured follow-ups.",
+    solution: "Designed automated welcome sequences, AI-driven lead scoring, dynamic newsletter generator, and automated AI email copy tailored to prospect behavior.",
+    result: "+64% Email Open Rate & 3.2x Booking Conversion",
+    features: [
+      "Welcome Email Flow",
+      "Intelligent Follow-ups",
+      "AI Lead Scoring",
+      "Newsletter Automation",
+      "AI Email Copy Generation"
+    ],
+    tools: ["Make.com", "ActiveCampaign", "Klaviyo", "OpenAI API"],
+    image: projectEmail,
+    liveUrl: "#",
+    githubUrl: null,
+    featured: true
+  },
+  {
+    id: 6,
+    title: "Multi-Channel Social Media Automation Engine",
+    category: "AI Automation",
+    tags: ["Social Media", "Content Engine", "Cross-Posting"],
+    target: "Creators, Brands & Marketing Agencies",
+    problem: "Spending 10+ hours per week manually formatting and posting content across multiple social platforms.",
+    solution: "Built single-post automation engine: publish once, automatically format and distribute across Facebook, LinkedIn, Instagram, Threads, and X.",
+    result: "1 Post ➔ 5 Platforms Auto-Syndicated in Seconds",
+    features: [
+      "Single-Input Publish",
+      "Auto-Distribution to 5 Platforms",
+      "AI Platform Adaptation",
+      "Hashtag Optimization",
+      "Analytics Tracking"
+    ],
+    tools: ["n8n", "LinkedIn API", "Meta Graph API", "X API", "OpenAI"],
+    image: projectSocial,
+    liveUrl: "#",
+    githubUrl: null,
+    featured: true
   }
 ];
