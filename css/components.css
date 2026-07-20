@@ -31,10 +31,11 @@
 }
 
 .navbar.scrolled {
-  background: rgba(2, 6, 23, 0.8);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--clr-border);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
 .navbar .container {
@@ -157,14 +158,14 @@
 
 .btn-primary {
   background: var(--clr-accent);
-  color: #0A0A0F;
-  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
 }
 .btn-primary:hover {
   background: #D97706;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
-  color: #0A0A0F;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+  color: #FFFFFF;
 }
 
 .btn-secondary {
@@ -212,18 +213,17 @@
 /* ---------- Glass Card ---------- */
 .glass-card {
   background: var(--clr-bg-card);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
   transition: all var(--dur-normal) var(--ease-out);
 }
 
 .glass-card:hover {
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: var(--clr-border-hover);
   transform: translateY(-5px);
-  background: rgba(30, 41, 59, 0.5);
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-lg);
 }
 
 /* ---------- Badges ---------- */
@@ -268,7 +268,7 @@
 .form-input {
   width: 100%;
   padding: var(--sp-3) var(--sp-4);
-  background: rgba(15, 22, 41, 0.6);
+  background: #FFFFFF;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
   color: var(--clr-text-primary);

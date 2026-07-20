@@ -153,11 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
     particlesJS('particles-js', {
       particles: {
         number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: ['#3b82f6', '#22d3ee', '#8b5cf6'] },
+        color: { value: ['#4f46e5', '#6366f1', '#f59e0b'] },
         shape: { type: 'circle' },
-        opacity: { value: 0.3, random: true },
+        opacity: { value: 0.35, random: true },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#3b82f6', opacity: 0.2, width: 1 },
+        line_linked: { enable: true, distance: 150, color: '#6366f1', opacity: 0.15, width: 1 },
         move: { enable: true, speed: 1.5, direction: 'none', out_mode: 'out' }
       },
       interactivity: {

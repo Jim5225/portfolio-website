@@ -172,7 +172,7 @@
 .search-input {
   width: 100%;
   padding: var(--sp-3) var(--sp-10) var(--sp-3) var(--sp-4);
-  background: rgba(15, 22, 41, 0.6);
+  background: #FFFFFF;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
   color: var(--clr-text-primary);
