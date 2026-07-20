@@ -9,6 +9,98 @@ import { TrustBar } from './components/TrustBar.js';
 // MAIN INITIALIZATION LOGIC
 // ==========================================
 
+window.handleHeroConnect = function(e) {
+  e.preventDefault();
+  const input = document.getElementById('hero-email-input');
+  if (input && input.value) {
+    if (typeof window.openBookingModal === 'function') {
+      window.openBookingModal(input.value);
+    } else {
+      alert('Thank you! I will get in touch with ' + input.value + ' shortly.');
+    }
+    input.value = '';
+  }
+};
+
+// Supabase config for global review storage
+const SUPABASE_URL = 'https://vrsqryjckxvkhfwhxxml.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZyc3FyeWpja3h2a2hmd2h4eG1sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1ODc3NDYsImV4cCI6MjA5ODE2Mzc0Nn0.tPE2g0_mg3m2VxoyLFU3Yo1Ec5kH1JODdGhC8S926og';
+
+window.handleReviewSubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('rev_name').value.trim();
+  const title = document.getElementById('rev_title').value.trim() || 'Verified Visitor';
+  const rating = parseInt(document.getElementById('rev_rating').value, 10) || 5;
+  const text = document.getElementById('rev_comment').value.trim();
+  const submitBtn = document.getElementById('review-submit-btn');
+
+  if (!name || !text) return;
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Posting Review &amp; Sending Email...";
+  }
+
+  // 1. Save to Supabase (globally visible to ALL visitors on any device)
+  fetch(`${SUPABASE_URL}/rest/v1/portfolio_reviews`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Prefer': 'return=representation'
+    },
+    body: JSON.stringify({
+      name: name,
+      title: title,
+      rating: rating,
+      review_text: text,
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80'
+    })
+  })
+  .then(res => res.json())
+  .then(() => {
+    // 2. Reload all reviews from Supabase (so the new review shows immediately)
+    if (typeof window.renderAllReviews === 'function') {
+      window.renderAllReviews();
+    }
+
+    // 3. Send email notification to jimjaaj@gmail.com via EmailJS
+    if (typeof emailjs !== 'undefined') {
+      emailjs.send('service_okqgufh', 'template_y9up7io', {
+        to_name: 'Jayed Al Afroz Jim',
+        from_name: name,
+        from_email: 'jimjaaj@gmail.com',
+        subject: `[New Portfolio Review] ${name} — ${rating}/5 Stars`,
+        message: `New review posted on your portfolio!\n\nFrom: ${name}\nRole/Company: ${title}\nRating: ${rating}/5 Stars\n\nReview:\n"${text}"\n\n--- Sent via portfolio contact form ---`
+      })
+      .then(() => console.log('Review notification email sent to jimjaaj@gmail.com'))
+      .catch(err => console.warn('EmailJS error:', err));
+    }
+
+    // 4. Reset form & show success
+    const form = document.getElementById('reviewCommentForm');
+    if (form) form.reset();
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "<i class='bx bx-paper-plane'></i> Post Review &amp; Send Email Notification";
+    }
+    import('./utils.js').then(module => {
+      module.showToast('Thank you! Your review is now live for everyone to see.', 'success');
+    });
+  })
+  .catch(err => {
+    console.error('Review submission error:', err);
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "<i class='bx bx-paper-plane'></i> Post Review &amp; Send Email Notification";
+    }
+    import('./utils.js').then(module => {
+      module.showToast('Something went wrong. Please try again.', 'error');
+    });
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   // SET YEAR
   const yearEl = document.getElementById('currentYear');
@@ -18,10 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const words = [
-      'AI Automation Systems ',
-      'Social Media Ads ',
-      'High-Converting Funnels ',
-      'Sales-Driven Websites '
+      'Save Time',
+      'Increase Revenue',
+      'Eliminate Repetitive Work'
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -142,11 +233,50 @@ document.addEventListener('DOMContentLoaded', () => {
     trustContainer.innerHTML = TrustBar();
   }
 
-  // RENDER TESTIMONIALS
-  const testimonialsGrid = document.getElementById('testimonials-grid');
-  if (testimonialsGrid) {
+  // RENDER TESTIMONIALS: Load from Supabase (global) + default verified reviews
+  window.renderAllReviews = function() {
+    const testimonialsGrid = document.getElementById('testimonials-grid');
+    if (!testimonialsGrid) return;
+
+    // Show default reviews immediately while fetching
     testimonialsGrid.innerHTML = testimonialsData.map(t => TestimonialCard(t)).join('');
-  }
+
+    // Fetch user-submitted reviews from Supabase (visible to ALL visitors worldwide)
+    fetch(`${SUPABASE_URL}/rest/v1/portfolio_reviews?order=created_at.desc`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      }
+    })
+    .then(res => res.json())
+    .then(rows => {
+      if (!Array.isArray(rows) || rows.length === 0) return;
+
+      // Map Supabase rows to review card format
+      const dbReviews = rows.map(row => ({
+        id: row.id,
+        name: row.name,
+        title: row.title || 'Verified Visitor',
+        avatar: row.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&h=120&q=80',
+        country: '🌐 Verified Comment',
+        platform: 'Community Review',
+        rating: row.rating || 5,
+        text: row.review_text
+      }));
+
+      // Prepend user reviews before default client reviews
+      const allReviews = [...dbReviews, ...testimonialsData];
+      testimonialsGrid.innerHTML = allReviews.map(t => TestimonialCard(t)).join('');
+      
+      // Re-initialize scroll reveal for the dynamically added elements so they become visible
+      if (typeof initScrollReveal === 'function') {
+        initScrollReveal();
+      }
+    })
+    .catch(err => console.warn('Could not load reviews from database:', err));
+  };
+
+  window.renderAllReviews();
 
   // INITIALIZE PARTICLES BACKGROUND
   if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {

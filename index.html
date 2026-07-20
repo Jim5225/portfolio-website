@@ -67,24 +67,25 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-dot"></span> Jim
+      <a href="#home" class="nav-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <img src="./assets/images/profile.webp" alt="Jayed Al Afroz" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #6344F5;">
+        <span style="font-weight: 800; font-size: 1.15rem; color: #111827;">Jayed Al Afroz</span>
       </a>
 
       <div class="nav-links" id="nav-links">
-        <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Projects</a>
-        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#portfolio" class="nav-link">Works</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#process" class="nav-link">Process</a>
-        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="./blog.html" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <div class="nav-cta">
-          <button class="btn btn-primary btn-sm" onclick="openBookingModal()">Book a Call</button>
-        </div>
+      </div>
+
+      <div class="nav-right-actions" style="display: flex; align-items: center; gap: 10px;">
+        <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="nav-icon-circle" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/Jim5225" target="_blank" class="nav-icon-circle" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="nav-icon-circle" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
       </div>
 
       <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation menu" tabindex="0">
@@ -96,63 +97,66 @@
   </nav>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (MATCHING REFERENCE SCREENSHOT) -->
     <section id="home" class="hero section">
-      <div class="hero-bg"></div>
-      <div id="particles-js"></div>
-
       <div class="container">
-        <div class="hero-content reveal">
-          <div class="hero-subtitle">Hello, I'm Jayed Al Afroz Jim</div>
-          <h1 class="hero-title">
-            I Build AI-Powered Marketing Systems That Turn Traffic Into Revenue
-            <span class="typewriter-text" id="typewriter" aria-hidden="true"></span>
-            <noscript>
-              <span class="typewriter-text" style="border-right: none;"> - Meta Ads &middot; AI Automation &middot; Conversion-First Web Development</span>
-            </noscript>
-          </h1>
-          <p class="hero-desc">
-            Meta Ads &middot; AI Automation &middot; Conversion-First Web Development
-          </p>
+        <div class="hero-card-container reveal">
+          <div class="hero-grid-split">
+            <!-- Left Text & Connect Form -->
+            <div class="hero-left-col">
+              <h1 class="hero-title-main font-display">
+                I Build AI Systems That <br>
+                <span class="purple-badge-pill">
+                  <span class="purple-badge-icon"><i class='bx bx-bolt-circle'></i></span>
+                  <span id="typewriter" class="typewriter-text">Save Time</span>
+                </span>
+                <noscript>Save Time, Increase Revenue, and Eliminate Repetitive Work.</noscript>
+              </h1>
+              
+              <p class="hero-subtitle-desc">
+                <strong>AI Automation</strong>, <strong>AI Agents</strong>, <strong>Modern Websites</strong>, and <strong>Performance Marketing</strong> that help businesses grow faster with less manual effort.
+              </p>
 
-          <div class="hero-actions" style="margin-bottom: var(--sp-4);">
-            <button class="btn btn-primary btn-lg" onclick="openBookingModal()">
-              Claim Your Free Growth Audit &rarr;
-            </button>
-            <a href="#portfolio" class="btn btn-secondary btn-lg">
-              See My Work &darr;
-            </a>
-          </div>
+              <!-- Connect / Lead Capture Inline Form & Consultation Button -->
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: var(--sp-4);">
+                <form class="hero-connect-box" onsubmit="handleHeroConnect(event)" style="margin-bottom: 0; flex-grow: 1;">
+                  <input type="email" id="hero-email-input" class="hero-connect-input" placeholder="Email address" required>
+                  <button type="submit" class="hero-connect-btn">Connect With Me</button>
+                </form>
 
-          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-8);">
-            <span style="color: var(--clr-success); margin-right: 4px;">✓</span> 3 audit slots available this month
-          </p>
+                <button class="btn btn-primary" onclick="openBookingModal()" style="padding: 13px 22px; font-size: var(--fs-sm); border-radius: 14px; background: #111827; color: #FFFFFF; border: none; box-shadow: 0 4px 15px rgba(17, 24, 39, 0.2);">
+                  <i class='bx bx-calendar-event' style="font-size: 1.2rem;"></i> Book a Consultation
+                </button>
+              </div>
 
-          <div class="social-links" style="justify-content: center;">
-            <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="social-link link-linkedin"
-              aria-label="LinkedIn">
-              <i class='bx bxl-linkedin'></i>
-            </a>
-            <a href="https://github.com/Jim5225" target="_blank" class="social-link link-github" aria-label="GitHub">
-              <i class='bx bxl-github'></i>
-            </a>
-            <a href="https://www.facebook.com/jayedalafroz.jim.5" target="_blank" class="social-link link-facebook"
-              aria-label="Facebook">
-              <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="social-link link-instagram" aria-label="Instagram">
-              <i class='bx bxl-instagram'></i>
-            </a>
+              <!-- High-Visibility Official Brand Social Buttons -->
+              <div class="brand-btn-group">
+                <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="brand-social-btn linkedin">
+                  <i class='bx bxl-linkedin'></i> LinkedIn
+                </a>
+                <a href="https://github.com/Jim5225" target="_blank" class="brand-social-btn github">
+                  <i class='bx bxl-github'></i> GitHub
+                </a>
+                <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="brand-social-btn instagram">
+                  <i class='bx bxl-instagram'></i> Instagram
+                </a>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 16px; margin-top: 18px; font-size: var(--fs-xs); color: #6B7280; flex-wrap: wrap;">
+                <span><i class='bx bx-check-circle' style="color: #10B981; margin-right: 4px;"></i> 3 audit slots available this month</span>
+                <span>&bull;</span>
+                <span><i class='bx bx-shield-quarter' style="color: #6344F5; margin-right: 4px;"></i> 100% Async Friendly</span>
+              </div>
+            </div>
+
+            <!-- Right Portrait & Confetti -->
+            <div class="hero-portrait-container">
+              <div class="confetti-background"></div>
+              <img src="./assets/images/profile.webp" alt="Jayed Al Afroz Jim" class="hero-portrait-img" loading="eager">
+            </div>
           </div>
         </div>
       </div>
-
-      <a href="#about" class="scroll-indicator">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-        Scroll Down
-      </a>
     </section>
 
     <!-- TRUST BAR CONTAINER -->
@@ -169,7 +173,7 @@
         <div class="about-grid">
           <div class="about-image-container reveal reveal-delay-1">
             <div class="about-image">
-              <img src="./assets/images/profile.webp" alt="Jayed Al Afroz Jim profile photo" loading="lazy">
+              <img src="./assets/images/about-profile.webp" alt="Jayed Al Afroz Jim - Less Manual Work, More Growth" loading="lazy">
 
               <div class="about-stats">
                 <div class="stat-item">
@@ -264,6 +268,47 @@
 
         <div class="testimonials-grid" id="testimonials-grid">
           <!-- Populated by JS -->
+        </div>
+
+        <!-- LEAVE A REVIEW / COMMENT FORM -->
+        <div class="reveal reveal-delay-2" style="max-width: 768px; margin: var(--sp-12) auto 0 auto;">
+          <div class="glass-card" style="padding: var(--sp-8); border-radius: var(--radius-xl); border: 1px solid var(--clr-border);">
+            <div style="text-align: center; margin-bottom: var(--sp-6);">
+              <h3 class="font-display" style="font-size: var(--fs-xl); margin-bottom: var(--sp-2);">Leave a Review or Comment</h3>
+              <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary);">Worked with Jim or have feedback? Share your review below. It will be posted live and sent directly to Jim's Gmail.</p>
+            </div>
+
+            <form id="reviewCommentForm" onsubmit="handleReviewSubmit(event)">
+              <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4);">
+                <div class="form-group">
+                  <label class="form-label" for="rev_name">Your Name *</label>
+                  <input type="text" id="rev_name" class="form-input" placeholder="e.g. Alex Johnson" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="rev_title">Role &amp; Company</label>
+                  <input type="text" id="rev_title" class="form-input" placeholder="e.g. Founder at TechFlow">
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--sp-4);">
+                <label class="form-label" for="rev_rating">Rating</label>
+                <select id="rev_rating" class="form-input" style="cursor: pointer;">
+                  <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+                  <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
+                  <option value="3">⭐⭐⭐ (3/5 Average)</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--sp-6);">
+                <label class="form-label" for="rev_comment">Your Review / Comment *</label>
+                <textarea id="rev_comment" class="form-input" placeholder="Write your thoughts, experience, or feedback..." required style="min-height: 100px;"></textarea>
+              </div>
+
+              <button type="submit" id="review-submit-btn" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i class='bx bx-paper-plane'></i> Post Review &amp; Send Email Notification
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -409,6 +454,22 @@
               <div class="skill-tag">Figma</div>
             </div>
           </div>
+
+          <!-- AI & Automation Skills -->
+          <div class="skills-category reveal reveal-delay-2">
+            <h3 class="skills-category-title font-display">
+              <i class='bx bx-bot icon'></i> AI Automation &amp; Agents
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-tag">Make.com</div>
+              <div class="skill-tag">n8n</div>
+              <div class="skill-tag">Claude Code</div>
+              <div class="skill-tag">OpenClaw</div>
+              <div class="skill-tag">Paperclip</div>
+              <div class="skill-tag">Zapier</div>
+              <div class="skill-tag">ChatGPT/OpenAI API</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -507,17 +568,21 @@
               </button>
             </div>
 
-            <!-- WhatsApp & Social Links Row -->
-            <div style="display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap;">
-              <a href="https://wa.me/8801852363235" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); flex-grow: 1; border: none;">
-                <i class='bx bxl-whatsapp' style="font-size: 1.25rem;"></i> Chat on WhatsApp &rarr;
+            <!-- WhatsApp & Official Brand Social Links Row -->
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: var(--sp-2);">
+              <a href="https://wa.me/8801852363235" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); width: 100%; border: none; padding: 12px 20px; font-weight: 600;">
+                <i class='bx bxl-whatsapp' style="font-size: 1.3rem;"></i> Chat on WhatsApp &rarr;
               </a>
-              <div style="display: flex; gap: var(--sp-2);">
-                <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="social-link link-linkedin" aria-label="LinkedIn" style="width: 44px; height: 44px;">
-                  <i class='bx bxl-linkedin'></i>
+
+              <div class="brand-btn-group" style="margin-top: 4px;">
+                <a href="https://www.linkedin.com/in/jayed-al-afroz-jim-38b335217/" target="_blank" class="brand-social-btn linkedin" style="flex-grow: 1; justify-content: center;">
+                  <i class='bx bxl-linkedin'></i> LinkedIn
                 </a>
-                <a href="https://github.com/Jim5225" target="_blank" class="social-link link-github" aria-label="GitHub" style="width: 44px; height: 44px;">
-                  <i class='bx bxl-github'></i>
+                <a href="https://github.com/Jim5225" target="_blank" class="brand-social-btn github" style="flex-grow: 1; justify-content: center;">
+                  <i class='bx bxl-github'></i> GitHub
+                </a>
+                <a href="https://www.instagram.com/jayedjim5/" target="_blank" class="brand-social-btn instagram" style="flex-grow: 1; justify-content: center;">
+                  <i class='bx bxl-instagram'></i> Instagram
                 </a>
               </div>
             </div>

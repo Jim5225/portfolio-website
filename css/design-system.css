@@ -7,44 +7,43 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* — Colors (Ultra-Clean Premium Light Palette) — */
-  --clr-bg-primary:     #F8FAFC; /* Slate-50 light background */
-  --clr-bg-secondary:   #FFFFFF; /* Pure crisp white */
-  --clr-bg-surface:     #F1F5F9; /* Surface container */
+  /* — Colors (Reference Screenshot Light Palette) — */
+  --clr-bg-primary:     #F4F5F9; /* Off-white canvas background */
+  --clr-bg-secondary:   #FFFFFF; /* Pure white card background */
+  --clr-bg-surface:     #F8FAFC;
   --clr-bg-card:        #FFFFFF; /* White card */
-  --clr-bg-glass:       rgba(255, 255, 255, 0.88);
+  --clr-bg-glass:       rgba(255, 255, 255, 0.95);
 
-  --clr-primary:        #4F46E5; /* Indigo primary */
-  --clr-primary-light:  #6366F1;
-  --clr-primary-dark:   #3730A3;
-  --clr-secondary:      #D97706; /* Warm amber */
-  --clr-secondary-light:#F59E0B;
-  --clr-accent:         #F59E0B; /* Amber CTA */
-  --clr-accent-light:   #FBBF24;
+  --clr-primary:        #6344F5; /* Electric Violet primary */
+  --clr-primary-light:  #7C5CFF;
+  --clr-primary-dark:   #4E31DB;
+  --clr-secondary:      #6344F5; /* Electric Violet accent */
+  --clr-secondary-light:#7C5CFF;
+  --clr-accent:         #6344F5; /* Electric Violet CTA */
+  --clr-accent-light:   #8B72FF;
 
-  --clr-text-primary:   #0F172A; /* Deep dark slate for maximum legibility */
-  --clr-text-secondary: #334155; /* Slate medium text */
-  --clr-text-muted:     #64748B; /* Slate muted text */
-  --clr-text-accent:    #D97706;
+  --clr-text-primary:   #111827; /* Deep crisp black headings */
+  --clr-text-secondary: #4B5563; /* Readable neutral slate text */
+  --clr-text-muted:     #6B7280; /* Slate muted text */
+  --clr-text-accent:    #6344F5;
 
-  --clr-border:         #E2E8F0; /* Clean light border */
-  --clr-border-hover:   rgba(79, 70, 229, 0.3);
-  --clr-border-glow:    rgba(245, 158, 11, 0.3);
+  --clr-border:         #E5E7EB; /* Subtle soft border */
+  --clr-border-hover:   rgba(99, 68, 245, 0.3);
+  --clr-border-glow:    rgba(99, 68, 245, 0.2);
 
-  --clr-success:        #059669;
-  --clr-warning:        #D97706;
-  --clr-error:          #DC2626;
+  --clr-success:        #10B981;
+  --clr-warning:        #F59E0B;
+  --clr-error:          #EF4444;
 
   /* — Gradients — */
-  --grad-primary:       linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
-  --grad-primary-hover: linear-gradient(135deg, #4338CA 0%, #4F46E5 100%);
-  --grad-hero:          radial-gradient(ellipse at 20% 40%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 80% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 50% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 60%);
-  --grad-mesh:          linear-gradient(45deg, #F8FAFC 0%, #FFFFFF 50%, #F1F5F9 100%);
-  --grad-card:          linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(245, 158, 11, 0.03) 100%);
-  --grad-text:          linear-gradient(135deg, #3730A3 0%, #4F46E5 50%, #D97706 100%);
-  --grad-glow:          radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  --grad-primary:       linear-gradient(135deg, #6344F5 0%, #7C5CFF 100%);
+  --grad-primary-hover: linear-gradient(135deg, #4E31DB 0%, #6344F5 100%);
+  --grad-hero:          radial-gradient(ellipse at 20% 40%, rgba(99, 68, 245, 0.06) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(124, 92, 255, 0.06) 0%, transparent 60%);
+  --grad-mesh:          linear-gradient(45deg, #F4F5F9 0%, #FFFFFF 50%, #F4F5F9 100%);
+  --grad-card:          linear-gradient(135deg, rgba(99, 68, 245, 0.02) 0%, rgba(124, 92, 255, 0.02) 100%);
+  --grad-text:          linear-gradient(135deg, #111827 0%, #6344F5 100%);
+  --grad-glow:          radial-gradient(circle, rgba(99, 68, 245, 0.1) 0%, transparent 70%);
 
   /* — Typography — */
   --ff-heading:  'Outfit', 'Syne', sans-serif;
@@ -53,7 +52,7 @@
 
   --fs-xs:   0.875rem;  /* 14px */
   --fs-sm:   0.9375rem; /* 15px */
-  --fs-base: 1.125rem;  /* 18px — Bolder, larger body text! */
+  --fs-base: 1.125rem;  /* 18px */
   --fs-md:   1.25rem;   /* 20px */
   --fs-lg:   1.375rem;  /* 22px */
   --fs-xl:   1.625rem;  /* 26px */
@@ -93,17 +92,17 @@
   /* — Border Radius — */
   --radius-sm:   8px;
   --radius-md:   12px;
-  --radius-lg:   18px;
-  --radius-xl:   28px;
+  --radius-lg:   20px;
+  --radius-xl:   32px;
   --radius-full: 9999px;
 
   /* — Light Theme Soft Shadows — */
-  --shadow-sm:   0 2px 8px rgba(15, 23, 42, 0.04);
-  --shadow-md:   0 8px 24px -4px rgba(15, 23, 42, 0.08);
-  --shadow-lg:   0 16px 32px -8px rgba(15, 23, 42, 0.12);
-  --shadow-xl:   0 24px 48px -12px rgba(15, 23, 42, 0.16);
-  --shadow-glow: 0 10px 25px -5px rgba(79, 70, 229, 0.2);
-  --shadow-glow-sm: 0 4px 12px rgba(79, 70, 229, 0.15);
+  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-md:   0 8px 24px -4px rgba(0, 0, 0, 0.06);
+  --shadow-lg:   0 16px 40px -8px rgba(0, 0, 0, 0.08);
+  --shadow-xl:   0 24px 60px -12px rgba(99, 68, 245, 0.12);
+  --shadow-glow: 0 10px 25px -5px rgba(99, 68, 245, 0.25);
+  --shadow-glow-sm: 0 4px 12px rgba(99, 68, 245, 0.2);
 
   /* — Blur — */
   --blur-sm:  8px;

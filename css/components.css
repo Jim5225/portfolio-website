@@ -95,6 +95,72 @@
   border-radius: var(--radius-full);
 }
 
+.nav-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(99, 68, 245, 0.08);
+  color: #6344F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-icon-circle:hover {
+  background: #6344F5;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Official Brand Social Buttons */
+.brand-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.brand-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.brand-social-btn i {
+  font-size: 1.25rem;
+}
+
+.brand-social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #FFFFFF !important;
+  opacity: 0.95;
+}
+
+.brand-social-btn.linkedin {
+  background: #0A66C2;
+}
+
+.brand-social-btn.github {
+  background: #24292E;
+}
+
+.brand-social-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
 .nav-cta {
   margin-left: var(--sp-4);
 }
