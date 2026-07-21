@@ -13,6 +13,7 @@ export default defineConfig({
         blogReduceCpl: resolve(__dirname, 'blog/reduce-cpl-meta-ads-ai.html'),
         blogAiAutomationStack: resolve(__dirname, 'blog/ai-automation-stack-2025.html'),
         blogPortfolioLosingClients: resolve(__dirname, 'blog/portfolio-losing-clients-fix.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
       }
     },
     minify: 'terser',
