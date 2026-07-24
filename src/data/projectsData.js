@@ -23,7 +23,7 @@ export const projectsData = [
     ],
     tools: ["HTML5", "Vanilla CSS", "JavaScript ES6", "Firebase Firestore"],
     image: projectHospital,
-    liveUrl: "https://github.com/Jim5225/medicare-hospital-portal",
+    liveUrl: "https://medicare-hospital-portal.vercel.app/",
     githubUrl: "https://github.com/Jim5225/medicare-hospital-portal",
     featured: true
   },
@@ -69,7 +69,7 @@ export const projectsData = [
     ],
     tools: ["HTML5", "CSS3", "JavaScript", "Chart.js"],
     image: projectTutor,
-    liveUrl: "#",
+    liveUrl: "https://english-tutor-app-nu.vercel.app/",
     githubUrl: null,
     featured: true
   },
@@ -92,7 +92,7 @@ export const projectsData = [
     ],
     tools: ["HTML5", "CSS", "JavaScript"],
     image: projectNawabiana,
-    liveUrl: "#",
+    liveUrl: "https://restaurant-nawabiana.vercel.app/",
     githubUrl: null,
     featured: true
   }
