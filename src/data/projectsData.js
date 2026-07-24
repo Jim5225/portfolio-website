@@ -1,142 +1,97 @@
-import projectRestaurant from '../../assets/images/project-restaurant.png';
-import projectClothing from '../../assets/images/project-clothing.png';
-import projectClinic from '../../assets/images/project-clinic.png';
-import projectMetaDashboard from '../../assets/images/project-meta-dashboard.png';
-import projectEmail from '../../assets/images/project-email.png';
-import projectSocial from '../../assets/images/project-social.png';
+import projectHospital from '../../assets/images/project-hospital.png';
+import projectAgency from '../../assets/images/project-agency.jpg';
+import projectTutor from '../../assets/images/project-tutor.jpg';
+import projectNawabiana from '../../assets/images/project-nawabiana.jpg';
 
 export const projectsData = [
   {
     id: 1,
-    title: "AI Restaurant Assistant & Reservation Bot",
-    category: "AI Automation",
-    tags: ["WhatsApp API", "n8n", "OpenAI"],
-    target: "Restaurants & Hospitality",
-    problem: "Missed phone reservations and manual order tracking during peak dining hours.",
-    solution: "Automated AI table booking via WhatsApp, menu recommendation engine, order tracking, and Google review collection.",
-    result: "+40% Table Bookings & 4.9★ Google Review Growth",
+    title: "MediCare Patient Portal",
+    category: "Web Development",
+    tags: ["HTML/CSS/JS", "Firebase", "Responsive UI"],
+    target: "Hospitals & Clinics",
+    problem: "Patients struggling to book appointments or download test reports remotely.",
+    solution: "A premium, fully functional patient portal with Firebase backend integration, enabling live appointment booking and a secure 'Link System' architecture for downloading medical reports directly from local servers.",
+    result: "Seamless Patient Experience & Cost-Effective Cloud Storage",
     features: [
-      "AI Table Booking",
-      "WhatsApp Integration",
-      "Menu Recommendation",
-      "Order Tracking",
-      "FAQ Bot",
-      "Google Review Collection"
+      "Patient Dashboard",
+      "Live Appointment Booking",
+      "Firebase Integration",
+      "Report Download System",
+      "Live Chat Widget",
+      "Responsive Glassmorphism UI"
     ],
-    tools: ["n8n", "OpenAI/Gemini", "WhatsApp API", "Google Sheets", "Gmail"],
-    image: projectRestaurant,
-    liveUrl: "#",
-    githubUrl: null,
+    tools: ["HTML5", "Vanilla CSS", "JavaScript ES6", "Firebase Firestore"],
+    image: projectHospital,
+    liveUrl: "https://github.com/Jim5225/medicare-hospital-portal",
+    githubUrl: "https://github.com/Jim5225/medicare-hospital-portal",
     featured: true
   },
   {
     id: 2,
-    title: "AI Clothing Brand E-Commerce Automation",
-    category: "AI Automation",
-    tags: ["Shopify", "Make.com", "OpenAI"],
-    target: "Fashion & Apparel Brands",
-    problem: "High abandoned cart rate and delayed customer support inquiries.",
-    solution: "Built end-to-end order processing, inventory alert automation, Facebook Messenger customer support AI, and abandoned cart email sequences.",
-    result: "-35% Cart Abandonment & 3.8x Ad ROAS",
+    title: "Vanguard Digital Agency",
+    category: "Web Development",
+    tags: ["Frontend", "Animation", "Modern UI"],
+    target: "Creative Agencies & Tech Firms",
+    problem: "Outdated agency websites failing to capture leads or showcase portfolios dynamically.",
+    solution: "Designed and developed a sleek, modern digital agency landing page with dark mode aesthetics, interactive scroll animations, and a compelling service showcase.",
+    result: "High-Converting Premium Brand Presence",
     features: [
-      "Order Automation",
-      "Inventory Alerts",
-      "Customer Support AI",
-      "FB Messenger Bot",
-      "Email Automation",
-      "Abandoned Cart Reminder"
+      "Dark Mode Aesthetics",
+      "Scroll Animations",
+      "Service Showcase",
+      "Interactive Hover Effects",
+      "Client Testimonials",
+      "Contact Form"
     ],
-    tools: ["Make.com", "Shopify", "OpenAI", "Gmail", "Meta Ads API"],
-    image: projectClothing,
+    tools: ["HTML5", "CSS3", "JavaScript"],
+    image: projectAgency,
     liveUrl: "#",
     githubUrl: null,
     featured: true
   },
   {
     id: 3,
-    title: "AI Clinic & Doctor Assistant System",
-    category: "AI Automation",
-    tags: ["Healthcare", "WhatsApp", "Google Calendar"],
-    target: "Medical Clinics & Private Practices",
-    problem: "High patient no-show rates and cluttered phone lines for appointment booking.",
-    solution: "Deployed 24/7 WhatsApp AI receptionist for appointment booking, automated SMS/WhatsApp reminders, prescription follow-ups, and Google Calendar sync.",
-    result: "82% Reduction in No-Shows & 15+ Hours Saved/Week",
+    title: "Fluency English Tutor App",
+    category: "Web Development",
+    tags: ["E-Learning", "Dashboard", "UI/UX"],
+    target: "EdTech & Independent Tutors",
+    problem: "Scattered tools for video calling, scheduling, and progress tracking for language learners.",
+    solution: "Built a centralized online learning platform UI featuring a student dashboard, live tutoring session scheduler, and visual progress charts.",
+    result: "Unified Learning Experience",
     features: [
-      "Appointment Booking",
-      "Patient Reminders",
-      "FAQ AI Bot",
-      "Prescription Reminders",
-      "WhatsApp Chatbot",
-      "Google Calendar Sync"
+      "Student Dashboard",
+      "Session Booking UI",
+      "Progress Tracking",
+      "Friendly Branding",
+      "Video Call Interface",
+      "Responsive Layout"
     ],
-    tools: ["n8n", "WhatsApp API", "Google Calendar API", "OpenAI"],
-    image: projectClinic,
+    tools: ["HTML5", "CSS3", "JavaScript", "Chart.js"],
+    image: projectTutor,
     liveUrl: "#",
     githubUrl: null,
     featured: true
   },
   {
     id: 4,
-    title: "Meta Ads & Performance Analytics Dashboard",
-    category: "Marketing & SEO",
-    tags: ["Meta Ads", "Analytics", "ROAS Tracking"],
-    target: "E-Commerce & B2B Brands",
-    problem: "Manual spreadsheet reporting and lack of real-time ad performance insights.",
-    solution: "Created live campaign performance dashboard tracking ROAS, CPC, lead pipeline, and automated AI optimization suggestions.",
-    result: "4.8x ROAS & Instant Campaign Optimization Alerts",
+    title: "Nawabiana Fine Dining",
+    category: "Web Development",
+    tags: ["Hospitality", "Luxury UI", "E-Commerce"],
+    target: "Luxury Restaurants",
+    problem: "Restaurants lacking a premium online presence that matches their physical dining experience.",
+    solution: "Created an elegant, dark-themed luxury restaurant website with high-end typography, dynamic menu showcase, and a table reservation system.",
+    result: "Premium Digital Dining Experience & Increased Reservations",
     features: [
-      "Campaign Dashboard",
-      "ROAS & CPC Tracking",
-      "Lead Funnel Analytics",
-      "Interactive Charts",
-      "AI Insights Engine"
+      "Luxury Dark Theme",
+      "Dynamic Menu Showcase",
+      "Table Reservation Form",
+      "High-end Typography",
+      "Image Galleries",
+      "Mobile Optimized"
     ],
-    tools: ["Meta Ads API", "Google Analytics 4", "React", "Looker Studio"],
-    image: projectMetaDashboard,
-    liveUrl: "#",
-    githubUrl: null,
-    featured: true
-  },
-  {
-    id: 5,
-    title: "Email Marketing & AI Lead Nurturing Automation",
-    category: "Marketing & SEO",
-    tags: ["Email Automation", "AI Copywriting", "Lead Scoring"],
-    target: "SaaS & B2B Agencies",
-    problem: "Cold leads dropping off without structured follow-ups.",
-    solution: "Designed automated welcome sequences, AI-driven lead scoring, dynamic newsletter generator, and automated AI email copy tailored to prospect behavior.",
-    result: "+64% Email Open Rate & 3.2x Booking Conversion",
-    features: [
-      "Welcome Email Flow",
-      "Intelligent Follow-ups",
-      "AI Lead Scoring",
-      "Newsletter Automation",
-      "AI Email Copy Generation"
-    ],
-    tools: ["Make.com", "ActiveCampaign", "Klaviyo", "OpenAI API"],
-    image: projectEmail,
-    liveUrl: "#",
-    githubUrl: null,
-    featured: true
-  },
-  {
-    id: 6,
-    title: "Multi-Channel Social Media Automation Engine",
-    category: "AI Automation",
-    tags: ["Social Media", "Content Engine", "Cross-Posting"],
-    target: "Creators, Brands & Marketing Agencies",
-    problem: "Spending 10+ hours per week manually formatting and posting content across multiple social platforms.",
-    solution: "Built single-post automation engine: publish once, automatically format and distribute across Facebook, LinkedIn, Instagram, Threads, and X.",
-    result: "1 Post ➔ 5 Platforms Auto-Syndicated in Seconds",
-    features: [
-      "Single-Input Publish",
-      "Auto-Distribution to 5 Platforms",
-      "AI Platform Adaptation",
-      "Hashtag Optimization",
-      "Analytics Tracking"
-    ],
-    tools: ["n8n", "LinkedIn API", "Meta Graph API", "X API", "OpenAI"],
-    image: projectSocial,
+    tools: ["HTML5", "CSS", "JavaScript"],
+    image: projectNawabiana,
     liveUrl: "#",
     githubUrl: null,
     featured: true
