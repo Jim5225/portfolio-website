@@ -493,6 +493,22 @@
   height: 100%;
 }
 
+.block-card {
+  border: 4px solid #0f172a;
+  border-radius: 16px;
+  box-shadow: 8px 8px 0px #0f172a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.block-card:hover {
+  transform: translate(-4px, -4px) !important;
+  box-shadow: 12px 12px 0px #0f172a !important;
+}
+
+.block-card .block-image {
+  border-bottom: 4px solid #0f172a;
+}
+
 .project-image {
   position: relative;
   width: 100%;

@@ -9,6 +9,29 @@ import projectMetaDashboard from '../../assets/images/project-meta-dashboard.png
 
 export const projectsData = [
   {
+    id: 9,
+    title: "BengalDrop Food Delivery",
+    category: "Web Development",
+    tags: ["Next.js", "Zustand", "Tailwind"],
+    target: "Restaurants & Cloud Kitchens",
+    problem: "Outdated and slow food ordering interfaces that result in high cart abandonment.",
+    solution: "A modern, high-conversion food ordering platform featuring a custom vibrant design system, global cart state management, and real-time checkout flows.",
+    result: "Premium Dribbble Design Match",
+    features: [
+      "Zustand Cart State",
+      "Dynamic Menu Layout",
+      "Vibrant Brand System",
+      "Checkout Flow UI",
+      "Responsive Grid",
+      "Modern Next.js Architecture"
+    ],
+    tools: ["Next.js", "React", "Tailwind CSS", "Zustand"],
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop',
+    liveUrl: "#",
+    githubUrl: "#",
+    featured: true
+  },
+  {
     id: 1,
     title: "MediCare Patient Portal",
     category: "Web Development",
